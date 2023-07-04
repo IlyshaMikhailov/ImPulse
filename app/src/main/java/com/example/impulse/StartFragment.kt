@@ -16,7 +16,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                 findNavController().navigate(R.id.action_startFragment_to_mainFragment)
             }
         }
-    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
