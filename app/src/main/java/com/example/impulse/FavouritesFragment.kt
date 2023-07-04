@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment
 import com.example.impulse.databinding.FavouritesFragmentBinding
 import androidx.navigation.fragment.findNavController
 
-class FavouritesFragment:Fragment(R.layout.favourites_fragment) {
-    private var binding: FavouritesFragmentBinding?=null
+class FavouritesFragment : Fragment(R.layout.favourites_fragment) {
+    private var binding: FavouritesFragmentBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FavouritesFragmentBinding.bind(view)
