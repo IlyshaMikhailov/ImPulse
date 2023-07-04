@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.impulse.databinding.SettingsFragmentBinding
 
 class SettingsFragment : Fragment(R.layout.settings_fragment) {
-    private var binding: SettingsFragmentBinding?=null
+    private var binding: SettingsFragmentBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = SettingsFragmentBinding.bind(view)

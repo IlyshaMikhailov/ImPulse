@@ -6,8 +6,8 @@ import android.view.View
 import com.example.impulse.databinding.CaloriesFragmentBinding
 
 
-class CaloriesFragment: Fragment(R.layout.calories_fragment) {
-    private var binding: CaloriesFragmentBinding?=null
+class CaloriesFragment : Fragment(R.layout.calories_fragment) {
+    private var binding: CaloriesFragmentBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = CaloriesFragmentBinding.bind(view)
