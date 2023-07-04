@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
 
     app:startDestination="@id/startFragment">
@@ -10,7 +9,7 @@
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.impulse.StartFragment"
-        android:label="@string/start_fragment" >
+        android:label="StartFragment">
         <action
             android:id="@+id/action_startFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -18,23 +17,22 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.impulse.MainFragment"
-        android:label="@string/main_fragment" />
-
+        android:label="MainFragment" />
     <fragment
         android:id="@+id/caloriesFragment"
         android:name="com.example.impulse.CaloriesFragment"
-        android:label="@string/calories_fragment" />
+        android:label="CaloriesFragment" />
     <fragment
         android:id="@+id/favouritesFragment"
         android:name="com.example.impulse.FavouritesFragment"
-        android:label="@string/favourite_fragment" />
+        android:label="FavouritesFragment" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.impulse.ProfileFragment"
-        android:label="@string/profile_fragment" />
+        android:label="ProfileFragment" />
     <fragment
-        android:id="@+id/workoutFragment"
-        android:name="com.example.impulse.WorkoutFragment"
-        android:label="@string/workout_fragment" />
+        android:id="@+id/exerciseFragment"
+        android:name="com.example.impulse.ExerciseFragment"
+        android:label="ExerciseFragment" />
 
 </navigation>
