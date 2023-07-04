@@ -8,5 +8,6 @@
     <string name="weight">Weight</string>
     <string name="desired_weight">Desired Weight</string>
     <string name="start">Start</string>
+    <string name="impulse">ImPulse</string>
 
 </resources>
