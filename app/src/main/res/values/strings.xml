@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ImPulse</string>
+    <string name="workout_list">Workout list</string>
+    <string name="exercise_list">Exercise list</string>
 </resources>
