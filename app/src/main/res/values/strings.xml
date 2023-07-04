@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ImPulse</string>
+    <string name="workout_list">Workout list</string>
+    <string name="exercise_list">Exercise list</string>
     <string name="height">Height</string>
     <string name="age">Age</string>
     <string name="name">Name</string>
@@ -7,4 +9,5 @@
     <string name="desired_weight">Desired Weight</string>
     <string name="start">Start</string>
     <string name="impulse">ImPulse</string>
+
 </resources>
