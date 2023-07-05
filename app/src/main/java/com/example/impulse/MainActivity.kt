@@ -2,6 +2,7 @@ package com.example.impulse
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -15,6 +16,15 @@ class MainActivity : AppCompatActivity() {
                 .navController
         findViewById<BottomNavigationView>(R.id.bnv_main).apply {
             setupWithNavController(controller)
+        }
+        controller.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.startFragment) {
+
+                findViewById<BottomNavigationView>(R.id.bnv_main).visibility = View.GONE
+            } else {
+
+                findViewById<BottomNavigationView>(R.id.bnv_main).visibility = View.VISIBLE
+            }
         }
     }
 }
