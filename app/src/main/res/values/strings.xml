@@ -16,7 +16,6 @@
     <string name="favourite_fragment">FavouritesFragment</string>
     <string name="profile_fragment">ProfileFragment</string>
     <string name="workout_fragment">WorkoutFragment</string>
-    <string name="impulse">ImPulse</string>
 
 
 </resources>
