@@ -61,7 +61,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
             override fun afterTextChanged(s: Editable?) {
                 val input = s.toString().trim()
                 if (input.isEmpty()) {
-                    binding!!.tiName.error = "Field cannot be empty"
+                    binding!!.tiName.error = "Enter a string value"
                 } else if (input.length > 20) {
                     binding!!.tiName.error = "Field cannot exceed 20 characters"
                 } else {
@@ -78,10 +78,10 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                     if (age in 1..150) {
                         binding!!.tiAge.error = null
                     } else {
-                        binding!!.tiAge.error = "Введите число в диапазоне от 1 до 150"
+                        binding!!.tiAge.error = "Enter a number in the range from 1 to 250"
                     }
                 } else {
-                    binding!!.tiAge.error = "Введите числовое значение"
+                    binding!!.tiAge.error = "Enter a numeric value"
                 }
             }
         })
@@ -94,10 +94,10 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                     if (input in (1..250)) {
                         binding!!.tiHeight.error = null
                     } else {
-                        binding!!.tiHeight.error = "Введите число в диапазоне от 1 до 250"
+                        binding!!.tiHeight.error = "Enter a number in the range from 1 to 250"
                     }
                 } else {
-                    binding!!.tiHeight.error = "Введите числовое значение"
+                    binding!!.tiHeight.error = "Enter a numeric value"
                 }
             }
         })
@@ -105,15 +105,15 @@ class StartFragment : Fragment(R.layout.start_fragment) {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
-                val input = s.toString().toIntOrNull()
+                val input = s.toString().toDoubleOrNull()
                 if (input != null) {
-                    if (input in (1..250)) {
+                    if (input in (1.0..250.0)) {
                         binding!!.tiWeight.error = null
                     } else {
-                        binding!!.tiWeight.error = "Введите число в диапазоне от 1 до 250"
+                        binding!!.tiWeight.error = "Enter a number in the range from 1 to 250"
                     }
                 } else {
-                    binding!!.tiWeight.error = "Введите числовое значение"
+                    binding!!.tiWeight.error = "Enter a numeric value"
                 }
             }
         })
@@ -121,20 +121,19 @@ class StartFragment : Fragment(R.layout.start_fragment) {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
-                val input = s.toString().toIntOrNull()
+                val input = s.toString().toDoubleOrNull()
                 if (input != null) {
-                    if (input in (1..250)) {
+                    if (input in (1.0..250.0)) {
                         binding!!.tiDesiredWeight.error = null
                     } else {
-                        binding!!.tiDesiredWeight.error = "Введите число в диапазоне от 1 до 250"
+                        binding!!.tiDesiredWeight.error = "Enter a number in the range from 1 to 250"
                     }
                 } else {
-                    binding!!.tiDesiredWeight.error = "Введите числовое значение"
+                    binding!!.tiDesiredWeight.error = "Enter a numeric value"
                 }
             }
         })
     }
-    
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
