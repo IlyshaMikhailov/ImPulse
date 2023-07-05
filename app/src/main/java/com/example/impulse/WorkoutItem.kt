@@ -18,7 +18,7 @@ class WorkoutItem(
             tvItemWorkoutDesc.text = workout.desc
             glide
                 .load(workout.image)
-                .error(R.drawable.error)
+               // .error(R.drawable.error)
                 .into(ivItemWorkoutImage)
             root.setOnClickListener{
                 onItemClick(workout)

@@ -17,10 +17,10 @@ class WorkoutFragment : Fragment(R.layout.workout_fragment) {
     }
     private fun initAdapter(){
         adapter = WorkoutAdapter(WorkoutRepository.list,
-        Glide.with(this),
-            {Workout->
-                findNavController().navigate(R.id.action_workoutFragment_to_exerciseFragment)
-            })
+        Glide.with(this)
+        ) { Workout ->
+            findNavController().navigate(R.id.action_workoutFragment_to_exerciseFragment)
+        }
         binding?.rvWorkoutFragment?.adapter = adapter
     }
 
