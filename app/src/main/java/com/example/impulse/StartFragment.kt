@@ -47,7 +47,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                         etDsWeight.toDouble() !in 0.0..250.0) {
                         textView?.text = "Данные введены некорректно."
                     } else {
-                        findNavController().navigate(R.id.action_startFragment_to_mainFragment)
+                        findNavController().navigate(R.id.action_startFragment_to_workoutFragment)
                     }
                 } catch (e: NumberFormatException) {
                     textView?.text = "Данные введены некорректно."
