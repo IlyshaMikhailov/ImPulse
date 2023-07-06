@@ -17,7 +17,7 @@ class ExerciseItem (
                 glide
                     .load(exercise.image)
                     .error(R.drawable.error)
-                    .into(iimTemExerciseImage)
+                    .into(ivItemExerciseImage)
                 root.setOnClickListener{
                     onItemClick(exercise)
                 }
