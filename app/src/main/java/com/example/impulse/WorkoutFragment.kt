@@ -28,4 +28,5 @@ class WorkoutFragment : Fragment(R.layout.workout_fragment) {
         super.onDestroyView()
         binding = null
     }
+
 }

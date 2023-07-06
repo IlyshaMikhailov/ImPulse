@@ -12,6 +12,5 @@ object WorkoutRepository {
             desc="100 best exercise",
             image = "https://sportishka.com/uploads/posts/2021-12/1639710217_77-sportishka-com-p-nakachennie-nogi-u-muzhchin-sport-krasvivo-80.jpg")
 
-
     )
 }

@@ -1,11 +1,8 @@
 package com.example.impulse
 
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.example.impulse.databinding.ItemWorkoutBinding
-import com.example.impulse.databinding.WorkoutFragmentBinding
 
 class WorkoutItem(
     private val binding: ItemWorkoutBinding,
