@@ -18,6 +18,8 @@
     <string name="workout_fragment">WorkoutFragment</string>
     <string name="profile">Profile</string>
     <string name="text_name">Text Name</string>
+    <string name="workout">Workout</string>
+    <string name="settings">Settings</string>
 
 
 </resources>
