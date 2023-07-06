@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.impulse.StartFragment"
+        android:label="StartFragment">
+        <action
+            android:id="@+id/action_startFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_workoutFragment"
+            app:destination="@id/workoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.impulse.MainFragment"
+        android:label="MainFragment" />
+    <fragment
+        android:id="@+id/caloriesFragment"
+        android:name="com.example.impulse.CaloriesFragment"
+        android:label="CaloriesFragment" />
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.example.impulse.FavouritesFragment"
+        android:label="FavouritesFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.impulse.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.example.impulse.ExerciseFragment"
+        android:label="ExerciseFragment" />
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.example.impulse.WorkoutFragment"
+        android:label="WorkoutFragment" >
+        <action
+            android:id="@+id/action_workoutFragment_to_exerciseFragment"
+            app:destination="@id/exerciseFragment" />
+    </fragment>
+
+</navigation>
