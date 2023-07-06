@@ -1,5 +1,6 @@
 package com.example.impulse
 
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -47,6 +48,14 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                         etDsWeight.toDouble() !in 0.0..250.0) {
                         textView?.text = "Данные введены некорректно."
                     } else {
+                        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+                        val editor = sharedPref?.edit()
+                        editor?.putString("Name", etName)
+                        editor?.putString("Height", etHeight)
+                        editor?.putString("Age", etAge)
+                        editor?.putString("Weight", etWeight)
+                        editor?.putString("DesiredWeight", etDsWeight)
+                        editor?.apply()
                         findNavController().navigate(R.id.action_startFragment_to_workoutFragment)
                     }
                 } catch (e: NumberFormatException) {
