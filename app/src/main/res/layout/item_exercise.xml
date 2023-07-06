@@ -34,7 +34,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Item workout title text for example" />
+            tools:text="Item exercise title text for example" />
 
         <TextView
             android:id="@+id/tv_item_exercise_desc"
@@ -49,7 +49,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_item_exercise_title"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="Item workout desc text for example" />
+            tools:text="Item exercise desc text for example" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
