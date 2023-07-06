@@ -37,7 +37,7 @@
             tools:text="Item workout title text for example" />
 
         <TextView
-            android:id="@+id/tv_item_exercise_desc"
+            android:id="@+id/tv_item_exercise_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
