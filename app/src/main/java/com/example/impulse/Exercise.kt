@@ -6,5 +6,6 @@ data class Exercise (
     val title: String,
     var isFavourites: Boolean,
     val description: String,
-    val gifka: Int,
+    val gif: Int,
+    val image : String,
 )
