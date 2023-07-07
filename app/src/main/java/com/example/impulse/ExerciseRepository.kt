@@ -16,6 +16,5 @@ object ExerciseRepository {
         Exercise(12, "legs", "Caviar", false, "Caviar upgrade", R.raw.ikra1,"https://www.futurefit.co.uk/wp-content/uploads/2019/08/shutterstock_1363264151-1500x1039.jpg"),
         Exercise(13, "back", "Pull up", false, "Classic pull up", R.raw.pullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2npiX20Vptj1OV8luBk1mr1z90gqYtmjuTg&usqp=CAU"),
         Exercise(14, "back", "Back bull up", false, "Classic", R.raw.backpullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pNX-axPYXsWmLTaSL8zewLL-cAkBKE792g&usqp=CAU"),
-
         )
 }
