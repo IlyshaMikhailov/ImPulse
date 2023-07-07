@@ -16,12 +16,16 @@
         android:layout_height="140dp">
 
         <ImageView
-            android:id="@+id/iim_tem_exercise_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/iv_item_exercise_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/baseline_star_24" />
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteX="38dp"
+            tools:src="@drawable/error" />
 
         <TextView
             android:id="@+id/tv_item_exercise_title"

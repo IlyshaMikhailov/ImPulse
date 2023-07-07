@@ -2,23 +2,19 @@ package com.example.impulse
 
 object ExerciseRepository {
     val list: List<Exercise> = listOf(
-        Exercise(1, "hands", "Standard push up", false, "Classic push up", R.raw.manpushups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfzEMCJqxaReBlIU24hN7KYaVLICsfkUMKrg&usqp=CAU"),
-        Exercise(15, "hands", "Biceps", false, "Classic", R.raw.bicepspullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2YFKW_uNxmkOirkw5cpL8bZtf-pwBg3Kfg&usqp=CAU"),
-        Exercise(2, "hands", "Reversed pull up", false, "Chair pull up", R.raw.reversedpullupsonthechair,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXxR7weASmpON51SN_Qw9StAPpDhqQ-R88Nw&usqp=CAU"),
-        Exercise(4, "press", "Scruchivaniya", false, "Scruchivaniya", R.raw.scruchivaniya,"https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.championat.com%2Fc%2F900x900%2Fnews%2Fbig%2Fw%2Fg%2Fkak-nakachat-kubiki-pressa_1606931301580211009.jpg&tbnid=SqgcnqCriwJ8nM&vet=12ahUKEwiO_oTm8vz_AhW8FRAIHUIbBfYQMygCegQIARBh..i&imgrefurl=https%3A%2F%2Fwww.championat.com%2Flifestyle%2Farticle-4205665-relefnyj-press-ot-igorja-vojtenko-kak-nakachat-kubiki-pressa.html&docid=POLi5-j50yrk1M&w=900&h=900&q=%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8%20%D1%80%D0%B0%D0%B7%D0%BD%D1%8B%D0%B9%20%D0%BC%D1%8B%D1%88%D1%86%20%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%B0&ved=2ahUKEwiO_oTm8vz_AhW8FRAIHUIbBfYQMygCegQIARBh"),
-        Exercise(5, "press", "Russian twists", false, "Russian twists", R.raw.russiantwists,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXMTZ5KaAQkj7zC2RxPjbp2jkDvqem39EAGg&usqp=CAU"),
-        Exercise(6, "press", "Plank", false, "Plank", R.raw.plank,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXmYJW9j8sojZNgbz7LorRgdwhFXgb5M9kg&usqp=CAU"),
-        Exercise(7, "press", "Scosors", false, "Scisors", R.raw.scisors,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd--0UfdhzXO4nkz5a-fy800KjC2g7VN7ihw&usqp=CAU"),
-        Exercise(8, "press", "Bicycle", false, "bicycle", R.raw.bicycle,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREAXCwpIDruU0oHJq0nIYP4pU-nUFrao2ACQ&usqp=CAU"),
-        Exercise(9, "press", "Alpinist", false, "Alpinist", R.raw.alpinist,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yiaFTn-5gBMnfn0VtpAkPK8ZSY8RKds3tw&usqp=CAU"),
-        Exercise(10, "press", "Bring sally up", false, "Bring sally up", R.raw.bringsallyup,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd8NYqNfkbaI_wZqNzLTJ1vlBpvsU9WqI8IQ&usqp=CAU"),
-        Exercise(11, "legs", "Sitdown", false, "Classic sit down", R.raw.sitdowns,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK24_fcmXS8ZSKxzjoXEduNLXG5_GyMzYtBQ&usqp=CAU"),
-        Exercise(12, "legs", "Caviar", false, "Caviar upgrade", R.raw.ikra1,"https://www.futurefit.co.uk/wp-content/uploads/2019/08/shutterstock_1363264151-1500x1039.jpg"),
-        Exercise(13, "back", "Pull up", false, "Classic pull up", R.raw.pullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2npiX20Vptj1OV8luBk1mr1z90gqYtmjuTg&usqp=CAU"),
-        Exercise(14, "back", "Back bull up", false, "Classic", R.raw.backpullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pNX-axPYXsWmLTaSL8zewLL-cAkBKE792g&usqp=CAU"),
-
+        Exercise(1, "hands", "Standard push up", false, "Classic push up", R.raw.manpushups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfzEMCJqxaReBlIU24hN7KYaVLICsfkUMKrg&usqp=CAU","https://media1.giphy.com/media/u0bxtw7oGJX8zIBPCD/giphy.gif?cid=ecf05e47t7k42nvomett88g4k4uud08g6vbtmfmk0srlzzqw&ep=v1_gifs_search&rid=giphy.gif&ct=g"),
+        Exercise(15, "hands", "Biceps", false, "Classic", R.raw.bicepspullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2YFKW_uNxmkOirkw5cpL8bZtf-pwBg3Kfg&usqp=CAU","https://media1.giphy.com/media/2ALcpIRjQFi21eezSI/giphy.gif?cid=ecf05e47yocsnymj6owk55w8ustial3ms4ojwenr12u19vzv&ep=v1_gifs_search&rid=giphy.gif&ct=g"),
+        Exercise(2, "hands", "Reversed pull up", false, "Chair pull up", R.raw.reversedpullupsonthechair,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXxR7weASmpON51SN_Qw9StAPpDhqQ-R88Nw&usqp=CAU","https://media4.giphy.com/media/jTs6TRPQAlHvtV044Y/giphy.gif?cid=ecf05e47t7k42nvomett88g4k4uud08g6vbtmfmk0srlzzqw&ep=v1_gifs_search&rid=giphy.gif&ct=g"),
+        Exercise(4, "press", "Scruchivaniya", false, "Scruchivaniya", R.raw.scruchivaniya,"https://www.mentoday.ru/upload/img_cache/a78/a78c6b22e05b8bad1038929d0f2aa717_ce_1080x719x0x52_cropped_666x444.jpg","https://assets.gq.ru/photos/5d9f40b43a54c0000840d1c6/4:3/w_285,h_213,c_limit/giphy.gif"),
+        Exercise(5, "press", "Russian twists", false, "Russian twists", R.raw.russiantwists,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXMTZ5KaAQkj7zC2RxPjbp2jkDvqem39EAGg&usqp=CAU","https://avalon.fabiosacdn.com/image/8595067f-1e07-401d-9df3-485c3134306e.gif"),
+        Exercise(6, "press", "Plank", false, "Plank", R.raw.plank,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXmYJW9j8sojZNgbz7LorRgdwhFXgb5M9kg&usqp=CAU","https://i.gifer.com/origin/b7/b7566b44f91a69b5d0e93775b481febc.gif"),
+        Exercise(7, "press", "Scisors", false, "Scisors", R.raw.scisors,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd--0UfdhzXO4nkz5a-fy800KjC2g7VN7ihw&usqp=CAU","https://avalon.fabiosacdn.com/image/56674407-10ea-4e9a-9571-13fd6236696d.gif"),
+        Exercise(8, "press", "Bicycle", false, "bicycle", R.raw.bicycle,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREAXCwpIDruU0oHJq0nIYP4pU-nUFrao2ACQ&usqp=CAU","https://media2.giphy.com/media/cM8tzmeTY0SYMz6VGj/giphy.gif"),
+        Exercise(9, "press", "Alpinist", false, "Alpinist", R.raw.alpinist,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yiaFTn-5gBMnfn0VtpAkPK8ZSY8RKds3tw&usqp=CAU","https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2JxMWo2OHMzNjN4bXA3dDNyZWpqcmQ0cDZna250dnI5eDM0YWFvciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iD7UrloaBlLB3ygIha/giphy.gif"),
+        Exercise(10, "press", "Bring sally up", false, "Bring sally up", R.raw.bringsallyup,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd8NYqNfkbaI_wZqNzLTJ1vlBpvsU9WqI8IQ&usqp=CAU","https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnVoMGFha3YyaGZ3cTFob3c1NGVwMnE2dXpxcThkemtsODBtaHUxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7zuAQ6ebll6maa2rBF/giphy.gif"),
+        Exercise(11, "legs", "Sitdown", false, "Classic sit down", R.raw.sitdowns,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK24_fcmXS8ZSKxzjoXEduNLXG5_GyMzYtBQ&usqp=CAU","https://wpstatic.gymbeam.com/blog/wp-content/uploads/mageblog/1f5dddd2a2a1b1b350de5b6dcae07807.gif"),
+        Exercise(12, "legs", "Caviar", false, "Caviar upgrade", R.raw.ikra1,"https://www.futurefit.co.uk/wp-content/uploads/2019/08/shutterstock_1363264151-1500x1039.jpg","https://media3.giphy.com/media/Y34H7RtoYT6MDTDMwd/giphy.gif"),
+        Exercise(13, "back", "Pull up", false, "Classic pull up", R.raw.pullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2npiX20Vptj1OV8luBk1mr1z90gqYtmjuTg&usqp=CAU","https://media1.giphy.com/media/j5VrvBfbV332AOow1B/giphy.gif?cid=ecf05e47yocsnymj6owk55w8ustial3ms4ojwenr12u19vzv&ep=v1_gifs_search&rid=giphy.gif&ct=g"),
+        Exercise(14, "back", "Back bull up", false, "Classic", R.raw.backpullups,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pNX-axPYXsWmLTaSL8zewLL-cAkBKE792g&usqp=CAU","https://cross.expert/wp-content/uploads/2017/08/Podtyagivaniya-za-golovu-1.gif"),
         )
 }
-
-
-

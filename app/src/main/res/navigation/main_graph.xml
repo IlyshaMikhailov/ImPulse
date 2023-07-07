@@ -44,7 +44,11 @@
     <fragment
         android:id="@+id/exerciseFragment"
         android:name="com.example.impulse.ExerciseFragment"
-        android:label="ExerciseFragment" />
+        android:label="ExerciseFragment" >
+        <action
+            android:id="@+id/action_exerciseFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/workoutFragment"
         android:name="com.example.impulse.WorkoutFragment"
