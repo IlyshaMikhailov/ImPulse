@@ -24,7 +24,11 @@
     <fragment
         android:id="@+id/caloriesFragment"
         android:name="com.example.impulse.CaloriesFragment"
-        android:label="CaloriesFragment" />
+        android:label="CaloriesFragment" >
+        <action
+            android:id="@+id/action_caloriesFragment_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favouritesFragment"
         android:name="com.example.impulse.FavouritesFragment"
@@ -62,7 +66,25 @@
         android:name="com.example.impulse.SettingsFragment"
         android:label="SettingsFragment" />
     <fragment
+
+        android:id="@+id/recipesFragment"
+        android:name="com.example.impulse.RecipesFragment"
+        android:label="fragment_recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeInfoFragment"
+            app:destination="@id/recipeInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeInfoFragment"
+        android:name="com.example.impulse.RecipeInfoFragment"
+        android:label="fragment_recipe_info"
+        tools:layout="@layout/fragment_recipe_info" />
+    <fragment
         android:id="@+id/infoFragment"
+        android:name="com.example.impulse.InfoFragment"
+        android:label="InfoFragment" />
+    android:id="@+id/infoFragment"
         android:name="com.example.impulse.InfoFragment"
         android:label="InfoFragment" />
 

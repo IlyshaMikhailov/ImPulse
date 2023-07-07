@@ -16,6 +16,7 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = ExerciseFragmentBinding.bind(view)
+        initAdapter()
 
         val descWorkout = arguments?.getString(STR)
         println(descWorkout)
@@ -44,6 +45,7 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
         binding?.rvExerciseFragment?.adapter = adapter
     }
 
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
@@ -60,3 +62,5 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
         }
     }
 }
+
+

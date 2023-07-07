@@ -53,13 +53,13 @@
     <ImageView
         android:id="@+id/iv_calories"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="200dp"
         app:layout_constraintTop_toBottomOf="@id/v_wat_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginVertical="12dp"
-        android:layout_marginHorizontal="12dp"
-        android:src = "@drawable/cal"
+        android:layout_marginHorizontal="0dp"
+        android:src = "@drawable/cal_image"
 
         />
     <View
@@ -97,44 +97,52 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_calories" />
     <Button
         android:id="@+id/btn_breakfast"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/v_image_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="28dp"
+        android:text="@string/breakfast_recipes"
         />
     <Button
         android:id="@+id/btn_lunch"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_breakfast"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="8dp"
+        android:text="@string/launch_recipes"
         />
     <Button
         android:id="@+id/btn_snack"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/btn_lunch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="8dp"
+        android:text="@string/snack_recipes"
         />
 
     <Button
         android:id="@+id/btn_dinner"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/btn_snack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="40dp"
+        android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="8dp"
+        android:text="@string/dinner_recipes"
         />
 
 
