@@ -16,4 +16,12 @@ class InfoFragment : Fragment(R.layout.info_fragment) {
         super.onDestroyView()
         binding = null
     }
+    companion object {
+
+        private const val ARG_ID = "ARG_ID"
+
+        fun createBundle(id: Int) = Bundle().apply {
+            putInt(ARG_ID, id)
+        }
+    }
 }

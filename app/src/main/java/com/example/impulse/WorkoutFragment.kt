@@ -10,6 +10,7 @@ import com.example.impulse.databinding.WorkoutFragmentBinding
 class WorkoutFragment : Fragment(R.layout.workout_fragment) {
     private var binding: WorkoutFragmentBinding? = null
     private var adapter: WorkoutAdapter? = null
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = WorkoutFragmentBinding.bind(view)
