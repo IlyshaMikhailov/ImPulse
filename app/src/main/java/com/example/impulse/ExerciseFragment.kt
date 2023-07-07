@@ -16,6 +16,7 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = ExerciseFragmentBinding.bind(view)
+        initAdapter()
 
         val descWorkout = arguments?.getString(STR)
         println(descWorkout)
@@ -38,11 +39,21 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
         )
         binding?.rvExerciseFragment?.adapter = adapter
     }
+    private fun initAdapter() {
+        adapter = ExerciseAdapter(
+            list,
+            Glide.with(this)
+        ) { Workout ->
+            findNavController().navigate(R.id.action_workoutFragment_to_exerciseFragment)
+        }
+        binding?.rvExerciseFragment?.adapter = adapter
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
     }
+}
 
     companion object {
 
