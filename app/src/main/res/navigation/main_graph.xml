@@ -80,7 +80,11 @@
         android:name="com.example.impulse.RecipeInfoFragment"
         android:label="fragment_recipe_info"
         tools:layout="@layout/fragment_recipe_info" />
+    <fragment
         android:id="@+id/infoFragment"
+        android:name="com.example.impulse.InfoFragment"
+        android:label="InfoFragment" />
+    android:id="@+id/infoFragment"
         android:name="com.example.impulse.InfoFragment"
         android:label="InfoFragment" />
 

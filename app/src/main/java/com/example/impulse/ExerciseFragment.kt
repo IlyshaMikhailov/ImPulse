@@ -33,36 +33,30 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
             glide = Glide.with(this),
             onItemClick = { exercise ->
                 findNavController().navigate(
-                        R.id.action_exerciseFragment_to_infoFragment,
-                        InfoFragment.createBundle(exercise.id))
+                    R.id.action_exerciseFragment_to_infoFragment,
+                    InfoFragment.createBundle(exercise.id)
+                )
             }
         )
         binding?.rvExerciseFragment?.adapter = adapter
     }
-    private fun initAdapter() {
-        adapter = ExerciseAdapter(
-            list,
-            Glide.with(this)
-        ) { Workout ->
-            findNavController().navigate(R.id.action_workoutFragment_to_exerciseFragment)
-        }
-        binding?.rvExerciseFragment?.adapter = adapter
-    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
     }
-}
 
     companion object {
 
         private const val STR = "STR"
 
-        fun createBundle(str : String): Bundle {
+        fun createBundle(str: String): Bundle {
             val bundle = Bundle()
             bundle.putString(STR, str)
             return bundle
         }
     }
 }
+
+
