@@ -16,12 +16,18 @@ class WorkoutFragment : Fragment(R.layout.workout_fragment) {
         binding = WorkoutFragmentBinding.bind(view)
         initAdapter()
     }
-    private fun initAdapter(){
-        adapter = WorkoutAdapter(WorkoutRepository.list,
-        Glide.with(this)
-        ) { Workout ->
-            findNavController().navigate(R.id.action_workoutFragment_to_exerciseFragment)
-        }
+
+    private fun initAdapter() {
+        adapter = WorkoutAdapter(
+            list = WorkoutRepository.list,
+            glide = Glide.with(this),
+            onItemClick = { workout ->
+                findNavController().navigate(
+                    R.id.action_workoutFragment_to_exerciseFragment,
+                    ExerciseFragment.createBundle(workout.title)
+                )
+            }
+        )
         binding?.rvWorkoutFragment?.adapter = adapter
     }
 

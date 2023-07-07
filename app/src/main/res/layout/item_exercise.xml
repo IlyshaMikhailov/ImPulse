@@ -16,7 +16,7 @@
         android:layout_height="140dp">
 
         <ImageView
-            android:id="@+id/iim_tem_exercise_image"
+            android:id="@+id/iv_item_exercise_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
