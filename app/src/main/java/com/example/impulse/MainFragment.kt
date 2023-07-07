@@ -12,7 +12,6 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         binding = MainFragmentBinding.bind(view)
 
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
