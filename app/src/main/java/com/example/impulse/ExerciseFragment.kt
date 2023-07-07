@@ -23,8 +23,12 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
             if (descWorkout == exercise.bodyPart)
                 listOfExercise.add(exercise)
         }
+        binding?.imBtnBack?.setOnClickListener {
+            findNavController().navigateUp()
+        }
         initAdapter()
     }
+
 
     private fun initAdapter() {
         adapter = ExerciseAdapter(
@@ -32,8 +36,9 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
             glide = Glide.with(this),
             onItemClick = { exercise ->
                 findNavController().navigate(
-                        R.id.action_exerciseFragment_to_infoFragment,
-                        InfoFragment.createBundle(exercise.id))
+                    R.id.action_exerciseFragment_to_infoFragment,
+                    InfoFragment.createBundle(exercise.id)
+                )
             }
         )
         binding?.rvExerciseFragment?.adapter = adapter
@@ -48,7 +53,7 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
 
         private const val STR = "STR"
 
-        fun createBundle(str : String): Bundle {
+        fun createBundle(str: String): Bundle {
             val bundle = Bundle()
             bundle.putString(STR, str)
             return bundle

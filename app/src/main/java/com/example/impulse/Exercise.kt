@@ -9,5 +9,6 @@ data class Exercise (
     var isFavourites: Boolean,
     val description: String,
     val gif: Int,
-    val image: String
+    val image: String,
+    val url: String,
 )
