@@ -10,7 +10,6 @@ class MainFragment : Fragment(R.layout.main_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = MainFragmentBinding.bind(view)
-
     }
     override fun onDestroyView() {
         super.onDestroyView()
