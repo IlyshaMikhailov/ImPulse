@@ -19,9 +19,15 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv_main"
+        style="@style/Widget.MaterialComponents.BottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
+        app:itemIconTint="@color/dark_primary_red"
+        app:itemRippleColor="@color/divider_color"
+        android:background="@color/back_grey"
+        app:itemTextColor="@color/dark_primary_red"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="4dp"
         app:menu="@menu/menu_bottom" />
 
 

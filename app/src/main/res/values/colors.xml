@@ -4,6 +4,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_primary_red">#D32F2F</color>
     <color name="grey">#7CD1D1D1</color>
-
+    <color name="light_primary_color">#FFCDD2</color>
+    <color name="primary_color">#F44336</color>
+    <color name="text_icns">#FFFFFF</color>
+    <color name="accent_color">#9E9E9E</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="divider_color">#BDBDBD</color>
+    <color name="back_grey">#F1F1F1</color>
 
 </resources>
