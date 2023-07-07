@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
+
 import com.example.impulse.databinding.ItemExerciseBinding
 
 class ExerciseAdapter(
@@ -12,9 +13,10 @@ class ExerciseAdapter(
     private val onItemClick: (Exercise)->Unit
 
 ) : RecyclerView.Adapter<ExerciseItem>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int
-    ): ExerciseItem =
-        ExerciseItem(
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ExerciseItem = ExerciseItem(
             binding = ItemExerciseBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,

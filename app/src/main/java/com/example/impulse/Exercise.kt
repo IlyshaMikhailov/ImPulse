@@ -1,7 +1,11 @@
 package com.example.impulse
 
-data class Exercise(
+data class Exercise (
+    val id: Int,
+    val bodyPart: String,
     val title: String,
-    val time: String,
-    val image: String
+    var isFavourites: Boolean,
+    val description: String,
+    val gif: Int,
+    val image : String,
 )

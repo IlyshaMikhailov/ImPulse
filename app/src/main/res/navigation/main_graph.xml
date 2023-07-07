@@ -28,11 +28,19 @@
     <fragment
         android:id="@+id/favouritesFragment"
         android:name="com.example.impulse.FavouritesFragment"
-        android:label="FavouritesFragment" />
+        android:label="FavouritesFragment" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.impulse.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
         android:name="com.example.impulse.ExerciseFragment"
@@ -45,5 +53,13 @@
             android:id="@+id/action_workoutFragment_to_exerciseFragment"
             app:destination="@id/exerciseFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.impulse.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.impulse.InfoFragment"
+        android:label="InfoFragment" />
 
 </navigation>

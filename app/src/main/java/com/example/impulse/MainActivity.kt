@@ -11,13 +11,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    private var binding : ActivityMainBinding? = null
+    private var binding: ActivityMainBinding? = null
+    private var repository: ExerciseRepository? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val newBinding = ActivityMainBinding.inflate(layoutInflater)
         binding = newBinding
         setContentView(newBinding.root)
-
         val controller =
             (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment)
                 .navController
@@ -30,9 +30,8 @@ class MainActivity : AppCompatActivity() {
             NavigationUI.onNavDestinationSelected(item, controller)
             return@setOnItemSelectedListener true
         }
-
         controller.addOnDestinationChangedListener { _, destination, _ ->
-            if(destination.id == R.id.startFragment) {
+            if (destination.id == R.id.startFragment) {
 
                 findViewById<BottomNavigationView>(R.id.bnv_main).visibility = View.GONE
             } else {
@@ -42,4 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        repository = null
+
+    }
+
 }
