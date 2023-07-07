@@ -32,7 +32,11 @@
     <fragment
         android:id="@+id/favouritesFragment"
         android:name="com.example.impulse.FavouritesFragment"
-        android:label="FavouritesFragment" />
+        android:label="FavouritesFragment" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.impulse.ProfileFragment"
@@ -44,7 +48,11 @@
     <fragment
         android:id="@+id/exerciseFragment"
         android:name="com.example.impulse.ExerciseFragment"
-        android:label="ExerciseFragment" />
+        android:label="ExerciseFragment" >
+        <action
+            android:id="@+id/action_exerciseFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/workoutFragment"
         android:name="com.example.impulse.WorkoutFragment"
@@ -58,6 +66,7 @@
         android:name="com.example.impulse.SettingsFragment"
         android:label="SettingsFragment" />
     <fragment
+
         android:id="@+id/recipesFragment"
         android:name="com.example.impulse.RecipesFragment"
         android:label="fragment_recipes"
@@ -71,5 +80,8 @@
         android:name="com.example.impulse.RecipeInfoFragment"
         android:label="fragment_recipe_info"
         tools:layout="@layout/fragment_recipe_info" />
+        android:id="@+id/infoFragment"
+        android:name="com.example.impulse.InfoFragment"
+        android:label="InfoFragment" />
 
 </navigation>

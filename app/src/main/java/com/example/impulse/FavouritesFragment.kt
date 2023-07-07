@@ -1,10 +1,10 @@
 package com.example.impulse
 
+
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.impulse.databinding.FavouritesFragmentBinding
-import androidx.navigation.fragment.findNavController
 
 class FavouritesFragment : Fragment(R.layout.favourites_fragment) {
     private var binding: FavouritesFragmentBinding? = null

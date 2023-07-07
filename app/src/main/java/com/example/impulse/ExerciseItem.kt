@@ -5,22 +5,22 @@ import com.bumptech.glide.RequestManager
 import com.example.impulse.databinding.ItemExerciseBinding
 
 
-class ExerciseItem (
+class ExerciseItem(
     private val binding: ItemExerciseBinding,
     private val glide: RequestManager,
-    private val onItemClick:(Exercise)->Unit
-    ) : ViewHolder(binding.root) {
-        fun onBind(exercise: Exercise) {
-            binding.run {
-                tvItemExerciseTitle.text = exercise.title
-                tvItemExerciseTime.text = exercise.time
-                glide
-                    .load(exercise.image)
-                    .error(R.drawable.error)
-                    .into(iimTemExerciseImage)
-                root.setOnClickListener{
-                    onItemClick(exercise)
-                }
+    private val onItemClick: (Exercise) -> Unit
+) : ViewHolder(binding.root) {
+    fun onBind(exercise: Exercise) {
+        binding.run {
+            tvItemExerciseTitle.text = exercise.title
+            tvItemExerciseTime.text = exercise.description
+            glide
+                .load(exercise.image)
+                .error(R.drawable.error)
+                .into(ivItemExerciseImage)
+            root.setOnClickListener {
+                onItemClick(exercise)
             }
         }
+    }
 }
