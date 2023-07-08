@@ -1,4 +1,4 @@
-package com.example.impulse
+package com.example.impulse.calories
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager

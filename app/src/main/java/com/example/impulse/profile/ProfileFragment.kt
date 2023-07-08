@@ -1,10 +1,11 @@
-package com.example.impulse
+package com.example.impulse.profile
 
 import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.impulse.R
 import com.example.impulse.databinding.ProfileFragmentBinding
 import com.example.impulse.databinding.ProfileFragmentBinding.*
 

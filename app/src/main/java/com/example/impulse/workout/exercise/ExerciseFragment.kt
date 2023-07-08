@@ -1,47 +1,56 @@
-package com.example.impulse
+package com.example.impulse.workout.exercise
 
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.example.impulse.workout.info.InfoFragment
+import com.example.impulse.R
 import com.example.impulse.databinding.ExerciseFragmentBinding
+import com.example.impulse.favourites.MyListAdapter
 
 class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
     private var binding: ExerciseFragmentBinding? = null
-    private var adapter: ExerciseAdapter? = null
-    private var setOfExercise = HashSet<Exercise>()
+    private var listAdapter: MyListAdapter? = null
+    private var descr: String? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = ExerciseFragmentBinding.bind(view)
-        initAdapter()
 
         val descWorkout = arguments?.getString(ARG_TITLE)
         println(descWorkout)
-        for (exercise in ExerciseRepository.hashSet) {
-            if (descWorkout == exercise.bodyPart)
-                setOfExercise.add(exercise)
-        }
+
         binding?.imBtnBack?.setOnClickListener {
             findNavController().navigateUp()
         }
-        initAdapter()
+
+        if (descWorkout != null) {
+            descr = descWorkout
+            println(descr)
+        }
+
+        listAdapter = MyListAdapter(
+            Glide.with(this),
+            ::onItemClick,
+            ::onDeleteClick
+        )
+
+        binding?.rvExerciseFragment?.adapter = listAdapter
+        listAdapter?.submitList(ExerciseRepository.findAllToString(descr!!))
     }
 
-
-    private fun initAdapter() {
-        adapter = ExerciseAdapter(
-            hashSet = setOfExercise,
-            glide = Glide.with(this),
-            onItemClick = { exercise ->
-                findNavController().navigate(
-                    R.id.action_exerciseFragment_to_infoFragment,
-                    InfoFragment.createBundle(exercise.id)
-                )
-            }
+    private fun onItemClick(exercise: Exercise) {
+        findNavController().navigate(
+            R.id.action_exerciseFragment_to_infoFragment,
+            InfoFragment.createBundle(exercise.id)
         )
-        binding?.rvExerciseFragment?.adapter = adapter
+    }
+
+    private fun onDeleteClick(exercise: Exercise) {
+        ExerciseRepository.updateFavorites(exercise.id, exercise.isFavourites)
+        listAdapter?.submitList(ExerciseRepository.findAllToString(descr!!))
     }
 
 

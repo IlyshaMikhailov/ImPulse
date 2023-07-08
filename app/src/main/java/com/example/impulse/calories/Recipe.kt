@@ -1,4 +1,4 @@
-package com.example.impulse
+package com.example.impulse.calories
 
 data class Recipe(
     val id:Int,

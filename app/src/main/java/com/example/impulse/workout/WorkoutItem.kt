@@ -1,7 +1,8 @@
-package com.example.impulse
+package com.example.impulse.workout
 
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.RequestManager
+import com.example.impulse.R
 import com.example.impulse.databinding.ItemWorkoutBinding
 
 class WorkoutItem(

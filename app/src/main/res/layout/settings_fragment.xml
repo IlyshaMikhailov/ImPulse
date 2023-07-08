@@ -14,60 +14,68 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/im_btn_back"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            tools:ignore="RtlSymmetry" />
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:gravity="center"
-        android:text="@string/settings"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintStart_toEndOf="@+id/im_btn_back"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        tools:ignore="RtlSymmetry" />
+        <ImageButton
+            android:id="@+id/im_btn_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
 
-    <ImageButton
-        android:id="@+id/im_btn_back"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/baseline_arrow_back_24"
-        android:src="@drawable/baseline_arrow_back_24"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_arrow_back_24" />
-
+    <View
+        android:id="@+id/v_change_data_profile"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/iv_edit_profile"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
         android:src="@drawable/baseline_edit_24"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/v_change_data_profile"
+        app:layout_constraintBottom_toBottomOf="@id/v_change_data_profile"/>
 
     <TextView
         android:id="@+id/tv_edit_profile"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:gravity="left|center_vertical"
-        android:text="Change data profile"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
-        app:layout_constraintStart_toEndOf="@+id/iv_edit_profile"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
+        android:text="@string/change_data_profile"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iv_edit_profile"
+        app:layout_constraintTop_toTopOf="@+id/v_change_data_profile"
+        app:layout_constraintBottom_toBottomOf="@id/v_change_data_profile"/> />
 
     <View
         android:id="@+id/v_edit_profile"
@@ -79,50 +87,42 @@
         android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_about_us" />
 
-        app:layout_constraintTop_toBottomOf="@+id/tv_edit_profile" />
+    <View
+        android:id="@+id/v_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/v_support_underline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/iv_info"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/baseline_info_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v_edit_profile" />
+        app:layout_constraintTop_toTopOf="@+id/v_about_us"
+        app:layout_constraintBottom_toBottomOf="@+id/v_about_us"/>
 
     <TextView
         android:id="@+id/tv_info"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:gravity="left|center_vertical"
         android:text="@string/about_us"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:passwordToggleTint="#FF0000">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/name" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_to_change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to_change_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/iv_info"
-        app:layout_constraintTop_toBottomOf="@+id/v_edit_profile" />
+        app:layout_constraintTop_toTopOf="@+id/v_about_us"
+        app:layout_constraintBottom_toBottomOf="@id/v_about_us"/>
 
     <View
         android:id="@+id/v_info"
@@ -133,36 +133,47 @@
         android:layout_marginEnd="16dp"
         android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
+        app:layout_constraintTop_toBottomOf="@+id/v_change_data_profile" />
+
+    <View
+        android:id="@+id/v_support"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/v_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/iv_support"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/baseline_person_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v_info" />
+        app:layout_constraintBottom_toBottomOf="@+id/v_support"
+        app:layout_constraintTop_toTopOf="@+id/v_support" />
 
     <TextView
         android:id="@+id/tv_support"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:gravity="left|center_vertical"
-        android:text="Support"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
+        android:text="@string/support"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/iv_support"
-        app:layout_constraintTop_toBottomOf="@+id/v_info" />
+        app:layout_constraintTop_toTopOf="@+id/v_support"
+        app:layout_constraintBottom_toBottomOf="@+id/v_support"/>
 
     <View
-        android:id="@+id/v_support"
+        android:id="@+id/v_support_underline"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginStart="16dp"
@@ -171,9 +182,7 @@
         android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_support" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/v_support" />
 
 
 

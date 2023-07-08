@@ -1,12 +1,11 @@
-package com.example.impulse
+package com.example.impulse.calories
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.example.impulse.R
 import com.example.impulse.databinding.FragmentRecipesBinding
 import kotlin.streams.toList
 
@@ -18,7 +17,7 @@ class RecipesFragment : Fragment(R.layout.fragment_recipes) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRecipesBinding.bind(view)
         val id_bundle = arguments?.getInt("CLASS_NAME")!!.toInt()
-        val eatings:Eatings = EatingsRepository.list.single{it.id == id_bundle}
+        val eatings: Eatings = EatingsRepository.list.single{it.id == id_bundle}
         binding?.tvTitle?.text = eatings.title
         binding?.tvDesc?.text = eatings.desc
         initAdapter(id_bundle)

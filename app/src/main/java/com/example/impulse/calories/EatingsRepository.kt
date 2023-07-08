@@ -1,4 +1,4 @@
-package com.example.impulse
+package com.example.impulse.calories
 
 object EatingsRepository {
     val list: List<Eatings> = listOf(
