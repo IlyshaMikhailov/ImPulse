@@ -25,7 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteX="38dp"
+
             tools:src="@drawable/error" />
 
         <ImageButton
@@ -34,7 +34,7 @@
             android:layout_height="48dp"
             android:foreground="?selectableItemBackground"
             android:background="#00FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@android:drawable/btn_star_big_on" />
 

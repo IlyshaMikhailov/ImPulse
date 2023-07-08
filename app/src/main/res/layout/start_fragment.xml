@@ -27,7 +27,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_name"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="84dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="64dp"
@@ -47,7 +47,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_age"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="84dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
@@ -65,7 +65,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_height"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="84dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginStart="16dp"
@@ -85,7 +85,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_weight"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="84dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
@@ -103,7 +103,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ti_desired_weight"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="84dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
@@ -135,8 +135,10 @@
 
     <TextView
         android:id="@+id/tv_error"
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:gravity="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
