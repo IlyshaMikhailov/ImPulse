@@ -24,8 +24,12 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
             if (descWorkout == exercise.bodyPart)
                 listOfExercise.add(exercise)
         }
+        binding?.imBtnBack?.setOnClickListener {
+            findNavController().navigateUp()
+        }
         initAdapter()
     }
+
 
     private fun initAdapter() {
         adapter = ExerciseAdapter(
