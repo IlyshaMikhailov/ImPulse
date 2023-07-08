@@ -18,8 +18,24 @@ class CaloriesFragment : Fragment(R.layout.calories_fragment) {
     val dsWeight = sharedPref?.getString("DesiredWeight", "")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+        val age = sharedPref?.getString("Age", "")?.toInt()
+        val height = sharedPref?.getString("Height", "")?.toInt()
+        val weight = sharedPref?.getString("Weight", "")?.toInt()
+        val dsWeight = sharedPref?.getString("DesiredWeight", "")?.toInt()
         binding = CaloriesFragmentBinding.bind(view)
-
+        if(age!=null && height!=null && weight!=null && dsWeight!=null){
+            binding?.tvWaterValue?.text = (weight*35/1000).toString()+" litres"
+            var cal =  10*weight + 6.25*height -5*age -161
+            if (dsWeight>weight){
+                cal = (cal*1.35)/1
+            }
+            if (dsWeight==weight) {
+                cal = (cal * 1.15)/1
+            }
+            val intcal:Int = cal.toInt()
+            binding?.tvCaloriesValue?.text = intcal.toString()+" kkal"
+        }
         binding?.btnBreakfast?.setOnClickListener{
             findNavController().navigate(R.id.action_caloriesFragment_to_recipesFragment,
                 createBundle(1)
