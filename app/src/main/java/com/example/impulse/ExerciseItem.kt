@@ -13,7 +13,7 @@ class ExerciseItem(
     fun onBind(exercise: Exercise) {
         binding.run {
             tvItemExerciseTitle.text = exercise.title
-            tvItemExerciseTime.text = exercise.description
+
             glide
                 .load(exercise.image)
                 .error(R.drawable.error)
