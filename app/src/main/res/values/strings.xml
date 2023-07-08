@@ -28,8 +28,8 @@
     <string name="breakfast_recipes">Breakfast Recipes</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="exercise">Exercise</string>
-    <string name="information">Information</string>
     <string name="favourites">Favourites</string>
+    <string name="information">Information</string>
 
 
 </resources>

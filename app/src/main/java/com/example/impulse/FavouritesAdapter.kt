@@ -6,12 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
 import com.example.impulse.databinding.ItemExerciseBinding
 
-class ExerciseAdapter(
+class FavouritesAdapter(
     private var list: ArrayList<Exercise>,
     private var glide: RequestManager,
     private val onItemClick: (Exercise) -> Unit,
-
 ) : RecyclerView.Adapter<ExerciseItem>() {
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -22,13 +22,12 @@ class ExerciseAdapter(
             false
         ),
         glide = glide,
-        onItemClick = onItemClick,
+        onItemClick = onItemClick
     )
 
     override fun onBindViewHolder(holder: ExerciseItem, position: Int) {
         holder.onBind(list[position])
     }
-
 
     override fun getItemCount(): Int {
         return list.size
