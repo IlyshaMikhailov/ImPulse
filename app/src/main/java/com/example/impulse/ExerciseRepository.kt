@@ -1,7 +1,7 @@
 package com.example.impulse
 
 object ExerciseRepository {
-    val list: List<Exercise> = listOf(
+    val hashSet =  setOf(
         Exercise(
             1,
             "Hands",
@@ -55,8 +55,9 @@ object ExerciseRepository {
             "Chest",
             "Chest",
             false,
-            description = "Get into push-up positions, and do the best you can, if it's still difficult, start with smaller numbers.\\n\" +\n" +
-                    "                    \"4 sets with a 4 minute break in between",
+            description = "Get into push-up positions, and do the best you can, if it's still difficult, start with smaller numbers.\n" +
+                    "4 sets with a 4 minute break in between",
+
             R.raw.manpushups,
             "https://storage.teendaily.ru/2021/11/08/67775cec-74ec-4a74-90ab-25d790258fcc.jpg",
             "https://cdn.lifehacker.ru/wp-content/uploads/2017/01/ezgif.com-02f99f58dd_1484735298.gif"

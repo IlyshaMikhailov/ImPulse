@@ -10,7 +10,7 @@ import com.example.impulse.databinding.ExerciseFragmentBinding
 class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
     private var binding: ExerciseFragmentBinding? = null
     private var adapter: ExerciseAdapter? = null
-    private var listOfExercise = ArrayList<Exercise>()
+    private var setOfExercise = HashSet<Exercise>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -19,9 +19,9 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
 
         val descWorkout = arguments?.getString(ARG_TITLE)
         println(descWorkout)
-        for (exercise in ExerciseRepository.list) {
+        for (exercise in ExerciseRepository.hashSet) {
             if (descWorkout == exercise.bodyPart)
-                listOfExercise.add(exercise)
+                setOfExercise.add(exercise)
         }
         binding?.imBtnBack?.setOnClickListener {
             findNavController().navigateUp()
@@ -32,7 +32,7 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
 
     private fun initAdapter() {
         adapter = ExerciseAdapter(
-            list = listOfExercise,
+            hashSet = setOfExercise,
             glide = Glide.with(this),
             onItemClick = { exercise ->
                 findNavController().navigate(

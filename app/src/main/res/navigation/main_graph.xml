@@ -90,6 +90,7 @@
         android:id="@+id/infoFragment"
         android:name="com.example.impulse.InfoFragment"
         android:label="InfoFragment" />
+
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.example.impulse.EditProfileFragment"
@@ -97,5 +98,7 @@
     android:id="@+id/infoFragment"
         android:name="com.example.impulse.InfoFragment"
         android:label="InfoFragment" />
+
+
 
 </navigation>
