@@ -16,25 +16,15 @@
         android:layout_height="140dp">
 
         <ImageView
-            android:id="@+id/iv_item_exercise_image"
+            android:id="@+id/iv_item_favourite_exercise_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/baseline_star_24" />
 
-        <ImageButton
-            android:id="@+id/im_btn_favourite"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:foreground="?selectableItemBackground"
-            android:background="#00FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
-
         <TextView
-            android:id="@+id/tv_item_exercise_title"
+            android:id="@+id/tv_item_favourite_exercise_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -44,10 +34,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Item exercise title text for example" />
+            tools:text="Item favourite exercise title text for example" />
 
         <TextView
-            android:id="@+id/tv_item_exercise_desc"
+            android:id="@+id/tv_item_favourite_exercise_desc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -55,11 +45,11 @@
             android:layout_marginBottom="16dp"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/tv_item_exercise_title"
+            app:layout_constraintEnd_toEndOf="@id/tv_item_favourite_exercise_title"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_item_exercise_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_favourite_exercise_title"
             app:layout_constraintVertical_bias="0.0"
-            tools:text="Item exercise desc text for example" />
+            tools:text="Item favourites exercise desc text for example" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
