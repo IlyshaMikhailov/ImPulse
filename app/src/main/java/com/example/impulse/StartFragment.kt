@@ -114,7 +114,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                 } else if (input.length > 20) {
                     binding!!.tiName.error = "Field cannot exceed 20 characters"
                 } else if (!input[0].isUpperCase()) {
-                    binding!!.tiName.error = "Чухан имя с Большой буквы писать нужно "
+                    binding!!.tiName.error = "The name must begin with a capital letter"
                 } else {
                     binding!!.tiName.error = null
                 }
@@ -132,7 +132,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                     if (age in 1..150) {
                         binding!!.tiAge.error = null
                     } else {
-                        binding!!.tiAge.error = "Enter a number in the range from 1 to 250"
+                        binding!!.tiAge.error = "Enter a number in the range from 1 to 150"
                     }
                 } else {
                     binding!!.tiAge.error = "Enter a numeric value"

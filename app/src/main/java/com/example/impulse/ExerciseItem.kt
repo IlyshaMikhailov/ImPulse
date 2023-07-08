@@ -38,7 +38,7 @@ class ExerciseItem(
             }
 
             tvItemExerciseTitle.text = exercise.title
-            tvItemExerciseDesc.text = exercise.description
+
 
             glide
                 .load(exercise.image)
