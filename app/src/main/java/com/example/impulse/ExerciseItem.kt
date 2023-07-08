@@ -39,7 +39,6 @@ class ExerciseItem(
 
             tvItemExerciseTitle.text = exercise.title
 
-
             glide
                 .load(exercise.image)
                 .error(R.drawable.error)
