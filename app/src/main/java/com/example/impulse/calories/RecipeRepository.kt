@@ -1,457 +1,436 @@
-package com.example.impulse.calories
+package com.example.impulse
 
 object RecipeRepository {
     val list:List<Recipe> = listOf(
         Recipe(
             id=1,
-            name="Сырники с изюмом",
-            kkal = "162 kkal per 100 gramm",
-            bzhu = "Proteins - 14 gramm\nFats - 5 gramm\nCarbohydrates - 16 gramm",
+            name="Cheesecakes with raisins ",
+            kkal = "162 kkal per 100 g.",
+            bzhu = "Proteins - 14 g.\nFats - 5 g.\nCarbohydrates - 16 g.",
             image = "https://samors.ru/wp-content/uploads/2022/05/Syrniki-s-izjumom-na-kukuruznoj-muke.jpg",
-            ingridients = "Творог 5 % – 400 г.\n" +
-                    "Мука  – 3 ст. л.\n" +
-                    "Яйцо – 1 шт.\n" +
-                    "Ванильный сахар – 8 г.\n" +
-                    "Изюм – 2 ст. л.\n" +
-                    "Подсластитель – по желанию.",
-            recipe = "Соединяем яйцо, творог, ванильный сахар, муку и перемешиваем. Для однородной массы можно взбить блендером. Добавляем промытый и обсушенный изюм, хорошо перемешиваем. Смачиваем руки водой, формируем изделия, обваливаем в муке. Выкладываем на разогретую сковороду, жарим на небольшом огне с обеих сторон до румяности, накрыв крышкой."
+            ingridients = "Cottage cheese 5 % – 400 g .\n" +
+                    "Flour – 3 tbsp. l.\n" +
+                    "Egg – 1 pc.\n" +
+                    "Vanilla sugar – 8 g.\n" +
+                    "Raisins – 2 tbsp. l.\n" +
+                    "Sweetener – optional.",
+            recipe = "Combine eggs, cottage cheese, vanilla sugar, flour and mix. For a homogeneous mass, you can beat it with a blender. Add the washed and dried raisins, mix well. We moisten our hands with water, form products, roll them in flour. Spread on a preheated frying pan, fry on low heat on both sides until ruddy, covered with a lid."
         ),
         Recipe(
             id = 2,
             name = "Squash lasagna with minced meat and cream",
-            kkal = "118 kkal per 91 gramm",
-            bzhu = "Proteins - 8 gramm\n" +
-                    "Fats - 5 gramm\n" +
-                    "Carbohydrates - 4 gramm",
+            kkal = "118 kkal per 91 g.",
+            bzhu = "Proteins - 8 g.\n" +
+                    "Fats - 5 g.\n" +
+                    "Carbohydrates - 4 g.",
             image = "https://samors.ru/wp-content/uploads/2023/04/kabachkovaya-lazanya-s-farshem-i-slivkami.jpg",
-            ingridients = "Кабачки – 1 кг.\n" +
-                    "Фарш куриный – 800 г.\n" +
-                    "Луковицы – 2 шт.\n" +
-                    "Морковь – 1–2 шт.\n" +
-                    "Томатная паста – 2 ст. л.\n" +
-                    "Чеснок – 3 дольки.\n" +
-                    "Соль, специи.\n" +
-                    "Яйца куриные – 2 шт.\n" +
-                    "Сливки 10 % – 200 г.\n" +
-                    "Сыр – 100 г.",
-            recipe = "1) Разогреваем сковородку, добавляем немного растительного масла. Обжариваем измельченный лук и чеснок до легкой румяности. Выкладываем натертую морковь, обжариваем еще 2 минуты.\n\n" +
-                    "2) Добавляем куриный фарш, обжариваем до того момента, пока он не посветлеет. Постоянно перемешиваем, чтобы начинка получилась рассыпчатой. Далее добавляем соль, смесь перцев, сухой чеснок, молотый кориандр и томатную пасту.\n\n" +
-                    "3) Кабачки моем, обсушиваем, нарезаем вдоль на пластинки толщиной не более 5 мм. Для соуса смешиваем яйца, сливки, немного соли и свежемолотого перца.\n\n" +
-                    "4) На дно формы укладываем слой из кабачков, сверху распределяем фарш. Далее кабачки и немного заливки. Повторяем слои, пока не закончатся ингредиенты. Заканчиваем запеканку слоем кабачков, поливаем оставшимся соусом, сверху натираем сыр.\n\n" +
-                    "5) Накрываем форму с лазаньей фольгой. Запекаем в разогретой до 180 градусов духовке примерно 40–45 минут. За 10 минут до готовности убираем фольгу, чтобы сыр подрумянился."
-        ), Recipe(
+            ingridients = "Zucchini – 1 kg.\n" +
+                    "Minced chicken – 800 g.\n" +
+                    "Bulbs – 2 pcs.\n" +
+                    "Carrots – 1-2 pcs.\n" +
+                    "Tomato paste – 2 tbsp. l.\n" +
+                    "Garlic – 3 slices.\n" +
+                    "Salt, spices.\n" +
+                    "Chicken eggs – 2 pcs.\n" +
+                    "Cream 10 % – 200 g.\n" +
+                    "Cheese – 100 g.",
+            recipe = "1) Preheat the frying pan, add a little vegetable oil. Fry the chopped onion and garlic until lightly browned. Spread the grated carrots, fry for another 2 minutes.\n\n" +
+                    "2) Add the minced chicken, fry until it brightens. Constantly mix to make the filling crumbly. Next, add salt, pepper mixture, dry garlic, ground coriander and tomato paste.\n\n" +
+                    "3) Wash the zucchini, dry it, cut it lengthwise into plates no more than 5 mm thick. For the sauce, mix eggs, cream, a little salt and freshly ground pepper.\n\n" +
+                    "4) We put a layer of zucchini on the bottom of the mold, distribute the minced meat on top. Next, zucchini and a little filling. Repeat the layers until the ingredients run out. Finish the casserole with a layer of zucchini, pour the remaining sauce, rub the cheese on top.\n\n" +
+                    "5) Cover the mold with lasagna foil. Bake in a preheated 180 degree oven for about 40-45 minutes. 10 minutes before cooking, remove the foil so that the cheese is browned."
+        ),Recipe(
             id =3 ,
             name = "Oatmeal bars with banana and dried fruits",
-            kkal = "295 kkal per 100 gramm",
-            bzhu = "Proteins - 8 gramm\n" +
-                    "Fats - 10 gramm\n" +
-                    "Carbohydrates - 47 gramm",
+            kkal = "295 kkal per 100 g.",
+            bzhu = "Proteins - 8 g.\n" +
+                    "Fats - 10 g.\n" +
+                    "Carbohydrates - 47 g.",
             image = "https://samors.ru/wp-content/uploads/2023/03/batonchiki-myusli-s-suhofruktami-i-shokoladom.jpg",
-            ingridients = "Овсяные хлопья – 150 г.\n" +
-                    "Изюм, курага, финки – 150 г.\n" +
-                    "Семечки подсолнечника – 50 г.\n" +
-                    "Горький шоколад – 25 г.\n" +
-                    "Яблочное пюре – 100 г.\n" +
-                    "Апельсиновая цедра.",
-            recipe = "Сухофрукты нарезаем небольшими кусочками. Горький шоколад режем мелким кубиком. К овсяным хлопьям долгой варки добавляем детское фруктовое пюре без сахара, тщательно размешиваем. Вмешиваем семечки, сухофрукты, шоколад и цедру одного апельсина. Выкладываем массу на противень, застеленный антипригарным ковриком. Распределяем ровным слоем, утрамбовываем. Выпекаем при температуре 170 градусов примерно 20 минут. Нарезам на батончики нужного размера."
-        ), Recipe(
+            ingridients = "Oat flakes – 150 g.\n" +
+                    "Raisins, dried apricots, finks – 150 g.\n" +
+                    "Sunflower seeds – 50 g.\n" +
+                    "Bitter chocolate – 25 g.\n" +
+                    "Applesauce – 100 g.\n" +
+                    "Orange peel.",
+            recipe = "Cut the dried fruits into small pieces. Bitter chocolate is cut into small cubes. To the oatmeal flakes of long cooking, add baby fruit puree without sugar, stir thoroughly. We mix seeds, dried fruits, chocolate and the zest of one orange. Spread the mass on a baking sheet covered with a non-stick mat. We distribute it evenly, tamp it down. Bake at a temperature of 170 degrees for about 20 minutes. Cut into bars of the desired size."
+        ),Recipe(
             id = 1,
             name = "Egg muffins with chicken and vegetables",
-            kkal = "105 kkal per 100 gramm",
-            bzhu = "Proteins - 12 gramm\n" +
-                    "Fats - 6 gramm\n" +
-                    "Carbohydrates - 3 gramm",
+            kkal = "105 kkal per 100 g.",
+            bzhu = "Proteins - 12 g.\n" +
+                    "Fats - 6 g.\n" +
+                    "Carbohydrates - 3 g.",
             image = "https://samors.ru/wp-content/uploads/2023/03/yaichnye-maffiny-s-kuriczej-i-ovoshhami-2.jpg",
-            ingridients = "Яйца куриные – 5 шт.\n" +
-                    "Йогурт натуральный – 60 г.\n" +
-                    "Сыр 9 % – 40 г.\n" +
-                    "Помидоры – 1 шт.\n" +
-                    "Куриное филе – 70 г.\n" +
-                    "Болгарский перец – 1 шт.\n" +
-                    "Соль, перец.",
-            recipe = "Мелко нарезаем овощи и отварное куриное филе, распределяем по формочкам для маффинов. В глубокой миске взбиваем яйца с солью, добавляем йогурт и немного натертого сыра. Омлетную смесь заливаем в формочки примерно на три четверти объема. Ставим маффины в духовку, выпекаем при температуре 180 градусов 15–20 минут."
-        ), Recipe(
+            ingridients = "Chicken eggs – 5 pcs.\n" +
+                    "Natural yogurt – 60 g.\n" +
+                    "cheese 9 % – 40 g.\n" +
+                    "Tomatoes – 1 pc.\n" +
+                    "Chicken fillet – 70 g.\n" +
+                    "Bulgarian pepper – 1 pc.\n" +
+                    "Salt, pepper.",
+            recipe = "Finely chop the vegetables and boiled chicken fillet, distribute them into muffin molds. In a deep bowl, beat the eggs with salt, add yogurt and a little grated cheese. The omelet mixture is poured into molds for about three quarters of the volume. Put the muffins in the oven, bake at 180 degrees for 15-20 minutes."
+        ),Recipe(
             id = 1,
             name = "Cottage cheese smoothie with berries and seeds",
-            kkal = "86 kkal per 100 gramm",
-            bzhu = "Proteins - 10 gramm\n" +
-                    "Fats - 4 gramm\n" +
-                    "Carbohydrates - 4 gramm",
+            kkal = "86 kkal per 100 g.",
+            bzhu = "Proteins - 10 g.\n" +
+                    "Fats - 4 g.\n" +
+                    "Carbohydrates - 4 g.",
             image = "https://samors.ru/wp-content/uploads/2023/03/smuzi-iz-tvoroga-s-yagodami-i-semenami.jpg",
-            ingridients = "Творог 5 % – 180 г.\n" +
-                    "Молоко 2,5 % – 180 мл.\n" +
-                    "Клубника – 70 г.\n" +
-                    "Семена льна – 1 ч. л.\n" +
-                    "Подсластитель – по вкусу.",
-            recipe = "Соединяем все продукты в чаше блендера, взбиваем до однородного состояния. По желанию можете добавить овсяные хлопья, орехи, семечки. Вместо молока также можно использовать кефир, йогурт или обычную воду."
-        ), Recipe(
+            ingridients = "Cottage cheese 5 % – 180 g.\n" +
+                    "Milk 2.5 % – 180 ml. \n" +
+                    "Strawberries – 70 g. \n" +
+                    "Flax seeds – 1 tsp.\n" +
+                    "Sweetener – to taste.",
+            recipe = "Combine all the products in a blender bowl, whisk until smooth. If desired, you can add oat flakes, nuts, seeds. Instead of milk, you can also use kefir, yogurt or plain water."
+        ),Recipe(
             id = 1,
             name = "Cabbage-egg pancake with tuna",
-            kkal = "89 kkal per 100 gramm",
-            bzhu = "Proteins - 8 gramm\n" +
-                    "Fats - 5 gramm\n" +
-                    "Carbohydrates - 3 gramm",
+            kkal = "89 kkal per 100 g.",
+            bzhu = "Proteins - 8 g.\n" +
+                    "Fats - 5 g.\n" +
+                    "Carbohydrates - 3 g.",
             image = "https://samors.ru/wp-content/uploads/2023/03/kapustno-yaichnyj-blin-s-tunczom.jpg",
-            ingridients = "Капуста молодая – 100 г.\n" +
-                    "Яйца – 2 шт.\n" +
-                    "Масло гхи – 3 г.\n" +
-                    "Соль, смесь перцев.\n" +
-                    "Тунец консервированный – 35 г.\n" +
-                    "Моцарелла – 10 г.\n" +
-                    "Укроп – 2 веточки.",
-            recipe = "Тунца разминаем вилкой. Смешиваем с натертым сыром и измельченным укропом. Молодую капусту мелко шинкуем, выкладываем на разогретую сковороду, готовим 2 минуты, постоянно помешивая. Яйца взбиваем с добавлением соли и перца, заливаем капусту. Готовим блин под крышкой на минимальном огне. Через 1–2 минуты аккуратно переворачиваем, подпекаем еще 30 секунд. На одну половинку блина выкладываем начинку из тунца, второй половиной накрываем. Посыпаем кунжутом или зеленью."
-        ), Recipe(
+            ingridients = "Young cabbage – 100 g.\n" +
+                    "Eggs – 2 pcs.\n" +
+                    "Ghee oil – 3 g.\n" +
+                    "Salt, pepper mixture.\n" +
+                    "Canned tuna – 35 g.\n" +
+                    "Mozzarella – 10 g.\n" +
+                    "Dill – 2 twigs.",
+            recipe = "Knead the tuna with a fork. Mix with grated cheese and chopped dill. Finely chop the young cabbage, put it on a preheated frying pan, cook for 2 minutes, stirring constantly. Beat the eggs with the addition of salt and pepper, pour the cabbage. We cook pancakes under a lid on a minimum heat. After 1-2 minutes, gently turn over, bake for another 30 seconds. We spread the tuna filling on one half of the pancake, cover the other half. Sprinkle with sesame seeds or herbs."
+        ),Recipe(
             id = 4,
             name = "Fish stewed in tomato sauce",
-            kkal = "60 kkal per 100 gramm",
-            bzhu = "Proteins - 10 gramm\n" +
-                    "Fats - 1 gramm\n" +
-                    "Carbohydrates - 2 gramm",
+            kkal = "60 kkal per 100 g.",
+            bzhu = "Proteins - 10 g.\n" +
+                    "Fats - 1 g.\n" +
+                    "Carbohydrates - 2 g.",
             image = "https://samors.ru/wp-content/uploads/2019/03/Ryba-tushenaja-v-tomatnom-souse.jpg",
-            ingridients = "Филе минтая – 450 г.\n" +
-                    "Морковь – 1 шт.\n" +
-                    "Помидоры – 200 г.\n" +
-                    "Оливковое масло – 1 ч. л.\n" +
-                    "Свежая зелень – пучок.\n" +
-                    "Соль, специи.",
-            recipe = "1) Рыбное филе режем кусочками, не мелко. Немного солим, посыпаем розмарином, сухими итальянскими травами.\n\n" +
-                    "2) Тертую морковь пассеруем на капельке оливкового масла.\n\n" +
-                    "3) Добавляем протертые томаты либо томатную пасту с водой. Кладем ложечку нежирной сметаны.\n\n" +
-                    "4) Тушим до мягкости овощей, примерно 7–8 минут, огонь средний. Пробуем на соль.\n\n" +
-                    "5) Выкладываем кусочки рыбы. Готовим под крышкой около 10 минут. Готовое блюдо посыпаем свежей зеленью."
-        ), Recipe(
+            ingridients = "Pollock fillet – 450 g .\n" +
+                    "Carrots – 1 pc.\n" +
+                    "Tomatoes – 200 g.\n" +
+                    "Olive oil – 1 tsp.\n" +
+                    "Fresh herbs – a bunch.\n" +
+                    "Salt, spices.",
+            recipe = "1) Fish fillet cut into pieces, not finely. A little salt, sprinkle with rosemary, dry Italian herbs.\n\n" +
+                    "2) Grated carrots passeruem on a drop of olive oil.\n\n" +
+                    "3) Add mashed tomatoes or tomato paste with water. We put a spoonful of low-fat sour cream.\n\n" +
+                    "4) Simmer until the vegetables are soft, about 7-8 minutes, medium heat. We try for salt.\n\n" +
+                    "5) We spread the pieces of fish. Cook under the lid for about 10 minutes. Sprinkle the finished dish with fresh herbs."
+        ),Recipe(
             id = 4,
             name = "Frittata with vegetables and cheese",
-            kkal = "122 kkal per 100 gramm",
-            bzhu = "Proteins - 8 gramm\n" +
-                    "Fats - 8 gramm\n" +
-                    "Carbohydrates - 3 gramm",
+            kkal = "122 kkal per 100 g.",
+            bzhu = "Proteins - 8 g.\n" +
+                    "Fats - 8 g.\n" +
+                    "Carbohydrates - 3 g.",
             image = "https://samors.ru/wp-content/uploads/2019/03/Frittata-s-ovoshhami-i-brynzoj.jpg",
-            ingridients = "Яйцо куриное – 6 шт.\n" +
-                    "Болгарский перец – 120 г.\n" +
-                    "Томаты – 120 г.\n" +
-                    "Брокколи – 120 г.\n" +
-                    "Брынза – 150 г.\n" +
-                    "Луковица – 1 шт.\n" +
-                    "Чеснок – 2 дольки.\n" +
-                    "Петрушка – 1 пучок.\n" +
-                    "Оливковое масло – ½ ст. л.\n" +
-                    "Специи.",
-            recipe = "1) Брынзу режем кубиком. Капусту брокколи разбираем на мелкие соцветия. Помидоры черри разрезаем пополам. Измельчаем петрушку, чеснок, лук, сладкий перец.\n\n" +
-                    "2) Яйца разбиваем в глубокую миску. Немного взбиваем вилкой со щепоткой соли и молотым перцем.\n\n" +
-                    "3) На разогретой сковороде с маслом слегка обжариваем лук с чесноком. Выкладываем остальные овощи, готовим в течение 5 минут. Добавляем нарубленную зелень.\n\n" +
-                    "4) Заливаем половиной яичной смеси. Когда яйца схватятся, раскладываем брынзу, вливаем оставшуюся заливку.\n\n" +
-                    "5) Как только края фриттаты схватятся, перемещаем форму в духовку. Запекаем при 180 градусах 15 минут."
-        ), Recipe(
+            ingridients = "Chicken egg – 6 pcs. \n" +
+                    "Bulgarian pepper – 120 g. \n" +
+                    "Tomatoes – 120 g. \n" +
+                    "Broccoli – 120 g. \n" +
+                    "Cheese – 150 g. \n" +
+                    "Onion – 1 pc. \n" +
+                    "Garlic – 2 cloves. \n" +
+                    "Parsley – 1 bunch. \n" +
+                    "Olive oil – ½ tbsp. l.\n" +
+                    "Spices.",
+            recipe = "1) Cut the cheese into cubes. We disassemble the broccoli cabbage into small inflorescences. Cherry tomatoes are cut in half. Chop parsley, garlic, onion, sweet pepper. \n\n" +
+                    "2) Break the eggs into a deep bowl. Beat a little with a fork with a pinch of salt and ground pepper. \n\n" +
+                    "3) In a preheated frying pan with oil, lightly fry the onion and garlic. Spread the rest of the vegetables, cook for 5 minutes. Add chopped greens. \n\n" +
+                    "4) Pour half of the egg mixture. When the eggs are seized, we lay out the cheese, pour in the remaining filling. \n\n" +
+                    "5) As soon as the frittata edges are gripped, we move the mold into the oven. Bake at 180 degrees for 15 minutes."
+        ),Recipe(
             id = 4,
             name = "Turkey roll with spinach and nuts",
-            kkal = "127 kkal per 100 gramm",
-            bzhu = "Proteins - 17 gramm\n" +
-                    "Fats - 7 gramm\n" +
-                    "Carbohydrates - 2 gramm",
+            kkal = "127 kkal per 100 g.",
+            bzhu = "Proteins - 17 g.\n" +
+                    "Fats - 7 g.\n" +
+                    "Carbohydrates - 2 g.",
             image = "https://samors.ru/wp-content/uploads/2022/11/Rulet-iz-indejki-so-shpinatom-i-orehami-2.jpg",
-            ingridients = "Филе грудки индейки – 800 г.\n" +
-                    "Луковица – 1 шт.\n" +
-                    "Шпинат замороженный – 160 г.\n" +
-                    "Твердый сыр – 100 г.\n" +
-                    "Грецкие орехи – 50 г.\n" +
-                    "Йогурт классический – 50 г.\n" +
-                    "Масло гхи – 2 ч. л.",
-            recipe = "1) Филе нарезаем на два пласта толщиной около 1,5 см. Каждый кусок накрываем пакетом или пищевой пленкой, аккуратно отбиваем с двух сторон.\n\n" +
-                    "2) Отбитое мясо перекладываем на тарелку, солим, перчим с двух сторон. Щедро намазываем густым натуральным йогуртом оба пласта. Оставляем полежать несколько минут.\n\n" +
-                    "3) На разогретой сковороде с маслом обжариваем лук, 2 минуты. После добавляем размороженный шпинат, готовим на небольшом огне еще 2 минуты. Снимаем с плиты, солим, даем остыть.\n\n" +
-                    "4) На мясной пласт выкладываем половину шпинатной массы, распределяем по одной трети поверхности. Сверху посыпаем тертым сыром и измельченными грецкими орехами. Сворачиваем индейку с начинкой в рулет, плотно обвязываем нитью. Точно так же скручиваем второй рулет.\n\n" +
-                    "5) Разогреваем сковороду, смазываем маслом, поджариваем рулеты 5–7 минут. Затем каждый рулет плотно заворачиваем в два слоя фольги, кладем веточку розмарина или тимьяна. Запекаем при 190 градусах 40 минут."
-        ), Recipe(
+            ingridients = "Turkey breast fillet – 800 g. \n" +
+                    "Onion – 1 pc. \n" +
+                    "Frozen spinach – 160 g. \n" +
+                    "Hard cheese – 100 g. \n" +
+                    "Walnuts – 50 g. \n" +
+                    "Classic yogurt – 50 g. \n" +
+                    "Ghee oil – 2 tsp.",
+            recipe = "1) Cut the fillet into two layers about 1.5 cm thick. Each piece is covered with a bag or food wrap, carefully beat off from both sides. \n\n" +
+                    "2) We transfer the beaten meat to a plate, salt, pepper on both sides. Generously spread thick natural yogurt on both layers. Leave to lie down for a few minutes. \n\n" +
+                    "3) Fry the onion in a preheated frying pan with oil for 2 minutes. After adding the defrosted spinach, cook on low heat for another 2 minutes. Remove from the stove, salt, let cool. \n\n" +
+                    "4) We spread half of the spinach mass on the meat layer, distribute it over one third of the surface. Sprinkle grated cheese and chopped walnuts on top. We roll the turkey with the filling into a roll, tightly tie it with a thread. In the same way, we twist the second roll. \n\n" +
+                    "5) Preheat the pan, lubricate with oil, fry the rolls for 5-7 minutes. Then we wrap each roll tightly in two layers of foil, put a sprig of rosemary or thyme. Bake at 190 degrees for 40 minutes."
+        ),Recipe(
             id =1 ,
             name = "Brizole with minced meat, vegetables and cheese",
-            kkal = "106 kkal per 100 gramm",
-            bzhu = "Proteins - 11 gramm\n" +
-                    "Fats - 6 gramm\n" +
-                    "Carbohydrates - 2 gramm",
+            kkal = "106 kkal per 100 g.",
+            bzhu = "Proteins - 11 g.\n" +
+                    "Fats - 6 g.\n" +
+                    "Carbohydrates - 2 g.",
             image = "https://samors.ru/wp-content/uploads/2022/10/Brizoli-s-farshem-ovoshhami-i-syrom.jpg",
-            ingridients = "Фарш куриный – 400 г.\n" +
-                    "Яйца куриные – 6 шт.\n" +
-                    "Молоко – 6 ст. л.\n" +
-                    "Моцарелла – 60 г.\n" +
-                    "Маринованные огурцы – 170 г.\n" +
-                    "Помидоры – 170 г.\n" +
-                    "Луковица – 1 шт.\n" +
-                    "Чеснок – 3 зубчика.\n" +
-                    "Соль, специи.",
-            recipe = "1) Лук, чеснок измельчаем, добавляем в фарш. Не забываем смесь посолить и поперчить по вкусу.\n\n" +
-                    "2) Маринованные огурцы и свежие помидоры режем кубиком.\n\n" +
-                    "3) В глубокой миске венчиком взбиваем яйца с молоком и щедрой щепоткой соли. Сковороду с антипригарным покрытием протираем растительным маслом. Обжариваем яичные блинчики с двух сторон до румяности.\n\n" +
-                    "4) На каждый блинчик выкладываем фарш, на половину его распределяем. Затем выкладываем начинку из помидоров и тертого сыра. Заворачиваем все в рулет. Делаем то же самое с начинкой из огурцов.\n\n" +
-                    "5) Бризоли выкладываем в форму для запекания. Убираем в разогретую до 180 градусов духовку на 30–35 минут."
-        ), Recipe(
+            ingridients = "Minced chicken – 400 g.\n" +
+                    "Chicken eggs – 6 pcs. \n" +
+                    "Milk – 6 tbsp. l.\n" +
+                    "Mozzarella – 60 g. \n" +
+                    "Pickled cucumbers – 170 g. \n" +
+                    "Tomatoes – 170 g. \n" +
+                    "Onion – 1 pc. \n" +
+                    "Garlic – 3 cloves. \n" +
+                    "Salt, spices.",
+            recipe = "1) Chop onion, garlic, add to minced meat. Do not forget to season the mixture with salt and pepper to taste. \n\n" +
+                    "2) Pickled cucumbers and fresh tomatoes cut into cubes. \n\n" +
+                    "3) In a deep bowl, whisk eggs with milk and a generous pinch of salt. A frying pan with a non-stick coating is wiped with vegetable oil. Fry the egg pancakes on both sides until browned. \n\n" +
+                    "4) We spread minced meat on each pancake, we distribute it on half. Then we spread the filling of tomatoes and grated cheese. We wrap everything in a roll. We do the same with cucumber stuffing. \n\n" +
+                    "5) Put the brizoli in a baking dish. Remove to a preheated 180 degree oven for 30-35 minutes."
+        ),Recipe(
             id = 2,
             name = "Minced meat casserole with vegetables",
-            kkal = "108 kkal per 100 gramm",
-            bzhu = "Proteins - 11 gramm\n" +
-                    "Fats - 5 gramm\n" +
-                    "Carbohydrates - 4 gramm",
+            kkal = "108 kkal per 100 g.",
+            bzhu = "Proteins - 11 g.\n" +
+                    "Fats - 5 g.\n" +
+                    "Carbohydrates - 4 g.",
             image = "https://samors.ru/wp-content/uploads/2022/10/Mjasnaja-zapekanka-iz-farsha-s-ovoshhami-2.jpg",
-            ingridients = "Фарш – 500 г.\n" +
-                    "Мексиканская смесь – 200 г.\n" +
-                    "Брокколи – 200 г.\n" +
-                    "Яйца – 3 шт.\n" +
-                    "Молоко – 150 мл.\n" +
-                    "Соль, специи.",
-            recipe = "1) Фарш солим, перчим и лепим из него среднего по размеру тефтельки. Перекладываем в форму для запекания.\n\n" +
-                    "2) Туда же добавляем овощи из заморозки. Я взял готовую мексиканскую смесь, брокколи, цветную капусту.\n\n" +
-                    "3) Отдельно в миске соединяем яйца, молоко и щепотку соли. Тщательно перемешиваем заливку венчиком до однородности.\n\n" +
-                    "4) Заливаем тефтели с овощами подготовленной яичной заливкой.\n\n" +
-                    "5) Отправляем запеканку в духовку, разогретую до 200 градусов на 40–45 минут. Готовое блюдо достаем из духовки, посыпаем свежей зеленью или тертым сыром."
-        ), Recipe(
+            ingridients = "Minced meat – 500 g. \n" +
+                    "Mexican mixture – 200 g. \n" +
+                    "Broccoli – 200 g. \n" +
+                    "Eggs – 3 pcs. \n" +
+                    "Milk – 150 ml. \n" +
+                    "Salt, spices.",
+            recipe = "1) Mince salt, pepper and mold it into medium-sized meatballs. Transfer to a baking dish. \n\n" +
+                    "2) Add frozen vegetables to the same place. I took a ready-made Mexican mixture, broccoli, cauliflower. \n\n" +
+                    "3) Separately in a bowl combine eggs, milk and a pinch of salt. Mix the filling thoroughly with a whisk until smooth. \n\n" +
+                    "4) Fill the meatballs with vegetables with prepared egg filling. \n\n" +
+                    "5) We send the casserole into the oven, preheated to 200 degrees for 40-45 minutes. We take the finished dish out of the oven, sprinkle with fresh herbs or grated cheese."
+        ),Recipe(
             id = 2,
             name = "Soup with rice and chicken meatballs",
-            kkal = "35 kkal per 100 gramm",
-            bzhu = "Proteins - 3 gramm\n" +
-                    "Fats - 1 gramm\n" +
-                    "Carbohydrates - 3 gramm",
+            kkal = "35 kkal per 100 g.",
+            bzhu = "Proteins - 3 g.\n" +
+                    "Fats - 1 g.\n" +
+                    "Carbohydrates - 3 g.",
             image = "https://samors.ru/wp-content/uploads/2022/10/Sup-s-risom-i-kurinymi-frikadelkami.jpg",
-            ingridients = "Вода – 2,5 л.\n" +
-                    "Фарш куриный – 450 г.\n" +
-                    "Овощная смесь – 300 г.\n" +
-                    "Рис – 100 г.\n" +
-                    "Чеснок – 2 зубчика.\n" +
-                    "Соль, специи.",
-            recipe = "1) В кипящую воду всыпаем полстакана риса, варим после закипания примерно 10 минут. Воду нужно обязательно посолить.\n\n" +
-                    "2) Куриный фарш солим, перчим. Добавляем мелко нарубленный чеснок и любимые пряности по вкусу.\n\n" +
-                    "3) Из мяса руками скатываем небольшие тефтельки. Закидываем их в суп, варим 5–7 минут.\n\n" +
-                    "4) Затем добавляем любую овощную смесь. Варим еще пару минут и снимаем кастрюлю с огня.\n\n" +
-                    "5) Перед подачей в каждую порцию дополняем свежей нарезанной зеленью. Подаем со ржаными гренками и сметаной."
-        ), Recipe(
+            ingridients = "Water – 2.5 l.\n" +
+                    "Minced chicken – 450 g.\n" +
+                    "Vegetable mixture – 300 g.\n" +
+                    "Rice – 100 g.\n" +
+                    "Garlic – 2 cloves.\n" +
+                    "Salt, spices.",
+            recipe = "1) Pour half a cup of rice into boiling water, cook after boiling for about 10 minutes. The water must be salted. \n\n" +
+                    "2) Salt and pepper the minced chicken. Add finely chopped garlic and favorite spices to taste. \n\n" +
+                    "3) We roll small meatballs out of the meat with our hands. We throw them into the soup, cook for 5-7 minutes. \n\n" +
+                    "4) Then add any vegetable mixture. Cook for a couple more minutes and remove the pan from the heat. \n\n" +
+                    "5) Before serving, add fresh chopped herbs to each serving. Served with rye croutons and sour cream."
+        ),Recipe(
             id = 3 ,
             name = "Oatmeal cookies with nuts and raisins",
-            kkal = " 257 kkal per 100 gramm",
-            bzhu = "Proteins - 10 gramm\n" +
-                    "Fats - 9 gramm\n" +
-                    "Carbohydrates - 34 gramm",
+            kkal = " 257 kkal per 100 g.",
+            bzhu = "Proteins - 10 g.\n" +
+                    "Fats - 9 g.\n" +
+                    "Carbohydrates - 34 g.",
             image = "https://samors.ru/wp-content/uploads/2022/04/Pechene-iz-ovsjanoj-muki-s-orehami-i-izjumom.jpg",
-            ingridients = "Мука овсяная – 180 г.\n" +
-                    "Разрыхлитель – 1,5 ч. л.\n" +
-                    "Яйца – 2 шт.\n" +
-                    "Сахарозаменитель – 3 ст. л.\n" +
-                    "Миндаль – 30 г.\n" +
-                    "Изюм – 40 г.\n" +
-                    "Лимонная цедра.",
-            recipe = "Яйца взбиваем с подсластителем до образования густой пены. Муку смешиваем с разрыхлителем и частями просеиваем в яичную массу, вымешиваем лопаткой. В готовое тесто добавляем цедру лимона, нарубленные орехи и предварительно замоченный изюм. Форму застилаем пергаментной бумагой, выкладываем тесто, равномерно распределяем тонким слоем. Убираем форму в духовку на 20–25 минут, 180 градусов. Затем достаем, сразу же нарезаем печенье порционно."
-        ), Recipe(
+            ingridients = "Oat flour – 180 g. \n" +
+                    "Baking powder – 1.5 tsp.\n" +
+                    "Eggs – 2 pcs. \n" +
+                    "Sweetener – 3 tbsp . l.\n" +
+                    "Almonds – 30 g. \n" +
+                    "Raisins – 40 g. \n" +
+                    "Lemon zest.",
+            recipe = "Beat the eggs with a sweetener until a thick foam forms. Mix the flour with baking powder and sift parts into the egg mass, knead with a spatula. Add lemon zest, chopped nuts and pre-soaked raisins to the finished dough. We cover the form with parchment paper, spread the dough, evenly distribute a thin layer. We put the mold in the oven for 20-25 minutes, 180 degrees. Then we take it out, immediately cut the cookies into portions."
+        ),Recipe(
             id = 4,
             name = "Zucchini spaghetti with chicken and soy sauce",
-            kkal = "43 kkal per 100 gramm",
-            bzhu = "Proteins - 6 gramm\n" +
-                    "Fats - 1 gramm\n" +
-                    "Carbohydrates - 3 gramm",
+            kkal = "43 kkal per 100 g.",
+            bzhu = "Proteins - 6 g.\n" +
+                    "Fats - 1 g.\n" +
+                    "Carbohydrates - 3 g.",
             image = "https://samors.ru/wp-content/uploads/2021/03/Spagetti-iz-kabachkov.jpg",
-            ingridients = "Кабачки – 3 шт.\n" +
-                    "Куриное филе – 600 г.\n" +
-                    "Чеснок – 2 зубчика.\n" +
-                    "Соевый соус.\n" +
-                    "Итальянские травы.",
-            recipe = "1) Три средних кабачка моем, натираем на терке для корейской моркови вместе с кожурой. Кабачки можно также нарезать без применения терки, но это будет гораздо дольше и сложнее.\n\n" +
-                    "2) Филе куриной грудки нарезаем маленькими кусочками. Мелко режем чеснок.\n" +
-                    "3) Далее необходимо отдельно обжарить филе и кабачки. Ставим разогреваться две сковороды, в каждую добавляем по капельке оливкового масла.\n\n" +
-                    "4) Выкладываем кабачковую лапшу и курицу, обжариваем, периодически помешивая. За 3–4 минуты до готовности к кабачкам добавляем чеснок и специи.\n\n" +
-                    "5) Готовое спагетти раскладываем на тарелку, добавляем куриное филе. Дополняем блюдо небольшим количеством соевого соуса и кунжутными семечками."
-        ), Recipe(
+            ingridients = "Zucchini – 3 pcs. \n" +
+                    "Chicken fillet – 600 g. \n" +
+                    "Garlic – 2 cloves. \n" +
+                    "Soy sauce. \n" +
+                    "Italian herbs.",
+            recipe = "1) Three medium zucchini are washed, grated on a grater for Korean carrots along with the peel. Zucchini can also be cut without the use of a grater, but it will be much longer and more difficult. \n\n" +
+                    "2) Chicken breast fillet cut into small pieces. Finely chop the garlic. \n\n" +
+                    "3) Next, you need to fry the fillets and zucchini separately. We put two frying pans to warm up, add a drop of olive oil to each. \n\n" +
+                    "4) Spread the squash noodles and chicken, fry, stirring occasionally. 3-4 minutes before the zucchini is ready, add garlic and spices. \n\n" +
+                    "5) Put the finished spaghetti on a plate, add the chicken fillet. We complement the dish with a small amount of soy sauce and sesame seeds."
+        ),Recipe(
             id = 2,
             name = "Carrot pizza with chicken breast and green peas",
-            kkal = "95 kkal per 100 gramm",
-            bzhu = "Proteins - 9 gramm\n" +
-                    "Fats - 3 gramm\n" +
-                    "Carbohydrates - 7 gramm",
+            kkal = "95 kkal per 100 g.",
+            bzhu = "Proteins - 9 g.\n" +
+                    "Fats - 3 g.\n" +
+                    "Carbohydrates - 7 g.",
             image = "https://samors.ru/wp-content/uploads/2021/02/Morkovnaja-picca-s-kurinoj-grudkoj.jpg",
-            ingridients = "Морковь – 3 шт.\n" +
-                    "Чеснок – 1 зубчик.\n" +
-                    "Яйцо – 1 шт.\n" +
-                    "Мука – 1 ст. л.\n" +
-                    "Адыгейский сыр – 30 г.\n" +
-                    "Помидоры в с/с – 4 шт.\n" +
-                    "Лук репчатый – ¼ шт.\n" +
-                    "Зеленый горошек – 2 ст. л.\n" +
-                    "Адыгейский сыр – 70 г.\n" +
-                    "Шпинат – 50 г.\n" +
-                    "Куриная грудка – 110 г.",
-            recipe = "1) При помощи кухонного комбайна измельчаем морковь, чеснок. После добавляем муку грубого помола, сыр, яйцо и снова все перебиваем.\n\n" +
-                    "2) Формируем руками тонкую круглую основу на противне, для удобства можно воспользоваться кольцом от разъемной формы для выпечки. Отправляем в духовку, запекаем при температуре 200 градусов в течение 10 минут.\n\n" +
-                    "3) Для соуса разминаем вилкой помидоры в собственном соку с добавлением итальянских трав. Для начинки мелко нарезаем лук, измельчаем отварную куриную грудку.\n\n" +
-                    "4) На основу из морковного теста выкладываем томатный соус, а затем начинку из куриной грудки, зеленого горошка и лука. Сверху посыпаем тертым сыром.\n\n" +
-                    "5) Ставим пиццу в духовку еще на 5 минут. Готовое блюдо украшаем листьями салата и шпинатом."
-        ), Recipe(
+            ingridients = "Carrots – 3 pcs.\n" +
+                    "Garlic – 1 clove \n" +
+                    "Egg – 1 pc. \n" +
+                    "Flour – 1 tbsp. l.\n" +
+                    "Adyghe cheese – 30 g. \n" +
+                    "Tomatoes in a / c – 4 pcs. \n" +
+                    "Onion – ¼ pcs. \n" +
+                    "Green peas – 2 tbsp. l.\n" +
+                    "Adyghe cheese – 70 g.\n" +
+                    "Spinach – 50 g. \n" +
+                    "Chicken breast – 110 g.",
+            recipe = "1) Using a food processor, chop carrots, garlic. After we add the coarse flour, cheese, egg and again we interrupt everything. \n\n" +
+                    "2) We form a thin round base on a baking sheet with our hands, for convenience, you can use a ring from a detachable baking dish. We send it to the oven, bake at a temperature of 200 degrees for 10 minutes. \n\n" +
+                    "3) For the sauce, mash tomatoes with a fork in their own juice with the addition of Italian herbs. For the filling, finely chop the onion, chop the boiled chicken breast. \n\n" +
+                    "4) Put tomato sauce on the base of carrot dough, and then the filling of chicken breast, green peas and onions. Sprinkle grated cheese on top. \n\n" +
+                    "5) Put the pizza in the oven for another 5 minutes. The finished dish is decorated with lettuce leaves and spinach."
+        ),Recipe(
             id = 3,
-            name = "sweets with almonds, peanuts and plums",
-            kkal = "220 kkal per 100 gramm",
-            bzhu = "Proteins - 10 gramm\n" +
-                    "Fats - 13 gramm\n" +
-                    "Carbohydrates - 28 gramm",
+            name = "Sweets with almonds, peanuts and plums",
+            kkal = "220 kkal per 100 g.",
+            bzhu = "Proteins - 10 g.\n" +
+                    "Fats - 13 g.\n" +
+                    "Carbohydrates - 28 g.",
             image = "https://samors.ru/wp-content/uploads/2020/10/Konfety-s-mindalem-arahisom-i-slivoj.jpg",
-            ingridients = "Вода – 20 мл.\n" +
-                    "Слива – 1 ст.\n" +
-                    "Миндаль – 1 ст.\n" +
-                    "Арахис – 1 ст.\n" +
-                    "Кокосовая стружка.",
-            recipe = "В чашу блендера заливаем воду, загружаем сушеную сливу, миндаль и арахис. Измельчаем до однородного состояния.\n" +
-                    "\n" +
-                    "Выкладываем столовую ложку получившейся массы на кокосовую стружку. Обваливаем и формируем конфетки. Конфеты помещаем в морозилку на пару часов, там они затвердеют, и их будет удобнее есть."
-        ), Recipe(
+            ingridients = "Water – 20 ml. \n" +
+                    "Plum – 1 tbsp. \n" +
+                    "Almonds – 1 tbsp. \n" +
+                    "Peanuts – 1 tbsp. \n" +
+                    "Coconut chips.",
+            recipe = "Pour water into the blender bowl, load dried plums, almonds and peanuts. Grind to a homogeneous state.\n\n" +
+                    "Spread a tablespoon of the resulting mass on coconut chips. We roll and form candies. We put the sweets in the freezer for a couple of hours, there they will harden, and it will be more convenient to eat them."
+        ),Recipe(
             id = 1  ,
             name = "Cottage cheese and cheese tortilla with herbs",
-            kkal = "137 kkal per 100 gramm",
-            bzhu = "Proteins - 14 gramm\n" +
-                    "Fats - 5 gramm\n" +
-                    "Carbohydrates - 6 gramm",
+            kkal = "137 kkal per 100 g.",
+            bzhu = "Proteins - 14 g.\n" +
+                    "Fats - 5 g.\n" +
+                    "Carbohydrates - 6 g.",
             image = "https://samors.ru/wp-content/uploads/2023/03/lepeshka-iz-syra-i-tvoroga-s-zelenyu.jpg",
-            ingridients = "Яйцо куриное – 1 шт.\n" +
-                    "Кефир – 40 г.\n" +
-                    "Сыр 9 % – 30 г.\n" +
-                    "Творог 5 % – 100 г.\n" +
-                    "Мука цельнозерновая – 1–2 ст. л.\n" +
-                    "Укроп, петрушка – 25 г.\n" +
-                    "Соль, специи.Смешиваем яйцо, кефир, щепотку соли. Добавляем творог, любую цельнозерновую муку. Хорошо перемешиваем, вмешиваем натертый сыр и нарезанную зелень. Сковороду разогреваем, смазываем капелькой растительного масла, распределяем творожную массу тонким слоем. Важно, чтобы толщина лепешки была не более двух сантиметров. Жарим хачапури под крышкой на умеренном огне с двух сторон до румяного цвета.",
-            recipe = "Смешиваем яйцо, кефир, щепотку соли. Добавляем творог, любую цельнозерновую муку. Хорошо перемешиваем, вмешиваем натертый сыр и нарезанную зелень. Сковороду разогреваем, смазываем капелькой растительного масла, распределяем творожную массу тонким слоем. Важно, чтобы толщина лепешки была не более двух сантиметров. Жарим хачапури под крышкой на умеренном огне с двух сторон до румяного цвета."
-        ), Recipe(
+            ingridients = "Chicken egg – 1 pc. \n" +
+                    "Kefir – 40 g. \n" +
+                    "Cheese 9 % – 30 g.\n" +
+                    "Cottage cheese 5 % – 100 g . \n" +
+                    "Wholegrain flour – 1-2 tbsp. l.\n" +
+                    "Dill, parsley – 25 g. \n" +
+                    "Salt, spices.",
+            recipe = "Mix the egg, kefir, and a pinch of salt. Add cottage cheese, any wholegrain flour. Mix well, mix grated cheese and chopped greens. Heat the frying pan, lubricate with a drop of vegetable oil, distribute the curd mass in a thin layer. It is important that the thickness of the cake was no more than two centimeters. Fry khachapuri under the lid on moderate heat on both sides until ruddy."
+        ),Recipe(
             id = 1,
             name = "Mini pancakes on sour cream with cocoa",
-            kkal = "158  kkal per 100 gramm",
-            bzhu = "Proteins - 7 gramm\n" +
-                    "Fats - 6 gramm\n" +
-                    "Carbohydrates - 18 gramm",
+            kkal = "158  kkal per 100 g.",
+            bzhu = "Proteins - 7 g.\n" +
+                    "Fats - 6 g.\n" +
+                    "Carbohydrates - 18 g.",
             image = "https://samors.ru/wp-content/uploads/2023/02/shokoladnye-mini-pankejki-na-smetane.jpg",
-            ingridients = "Мука рисовая – 80 г.\n" +
-                    "Сметана 10 % – 100 г.\n" +
-                    "Яйца куриные – 2 шт.\n" +
-                    "Разрыхлитель – 1 ч. л.\n" +
-                    "Какао-порошок – 2 ч. л.\n" +
-                    "ФитПарад – 2 саше.",
-            recipe = "Смешиваем необходимые ингредиенты между собой до однородности. Выпекаем на раскаленной антипригарной сковороде без масла, выкладывая тесто чайной ложкой. Подаем с финиковым сиропом, горьким шоколадом и свежими ягодами."
-        ), Recipe(
+            ingridients = "Rice flour – 80 g. \n" +
+                    "Sour cream 10 % – 100 g. \n" +
+                    "Chicken eggs – 2 pcs. \n" +
+                    "Baking powder – 1 tsp.\n" +
+                    "Cocoa powder - 2 tsp.\n" +
+                    "Fitparade – 2 sachets.",
+            recipe = "Mix the necessary ingredients together until smooth. Bake on a hot non-stick frying pan without oil, spreading the dough with a teaspoon. Served with date syrup, bitter chocolate and fresh berries."
+        ),Recipe(
             id = 2,
             name = "Chicken fillet meatballs with mushrooms and sauce",
-            kkal = "89 kkal per 100 gramm",
-            bzhu = "Proteins - 12 gramm\n" +
-                    "Fats - 12 gramm\n" +
-                    "Carbohydrates - 3 gramm",
+            kkal = "89 kkal per 100 g.",
+            bzhu = "Proteins - 12 g.\n" +
+                    "Fats - 12 g.\n" +
+                    "Carbohydrates - 3 g.",
             image = "https://samors.ru/wp-content/uploads/2023/02/tefteli-iz-kurinogo-file-s-gribami-i-sousom.jpg",
-            ingridients = "Куриное филе – 550 г.\n" +
-                    "Луковица – 1 шт.\n" +
-                    "Шампиньоны – 200 г.\n" +
-                    "Яйцо куриное – 1 шт.\n" +
-                    "Овсяные отруби – 1 ст. л.\n" +
-                    "Карри – ½ ч. л.\n" +
-                    "Соль, перец.\n" +
-                    "Масло растительное – 1 ст. л.\n" +
-                    "Луковица – 1 шт.\n" +
-                    "Шампиньоны – 250 г.\n" +
-                    "Сметана 15 % – 3 ст. л.\n" +
-                    "Карри – ½ ч. л.\n" +
-                    "Вода – ½ стакана.",
-            recipe = "1) Филе куриной грудки измельчаем в блендере или с помощью мясорубки. Так же поступаем с одной луковицей и половиной грибов.\n\n" +
-                    "2) Соединяем измельченные продукты, добавляем яйцо, приправу карри, соль, свежемолотый перец, отруби. Кстати, отруби можете заменить перемолотыми овсяными хлопьями. Перемешиваем, даем немного постоять.\n\n" +
-                    "3) Для зажарки режем оставшиеся грибы и лук. Сковороду смазываем маслом, пассеруем лук, затем кладем грибы. Тушим под крышкой.\n\n" +
-                    "4) Когда грибы станут мягкими и пустят сок, добавляем сметану, приправу карри, горячую воду, солим по вкусу. Доводим до кипения, выключаем огонь, даем остыть.\n\n" +
-                    "5) Скатываем влажными руками мясные шарики среднего размера. Кладем в сотейник, заливаем грибным соусом, ставим на плиту. Тушим под крышкой 20 минут, огонь средний. Периодически поливаем тефтели соусом. Готовому блюду даем немного настояться под крышкой."
-        ), Recipe(
+            ingridients = "Chicken fillet – 550 g. \n" +
+                    "Onion – 1 pc. \n" +
+                    "Champignons – 200 g. \n" +
+                    "Chicken egg – 1 pc. \n" +
+                    "Oat bran – 1 tbsp\n" +
+                    "Curry – ½ tsp\n" +
+                    "Salt, pepper. \n" +
+                    "Vegetable oil – 1 tbsp. l.\n" +
+                    "Onion – 1 pc. \n" +
+                    "Champignons – 250 g. \n" +
+                    "Sour cream 15% – 3 tbsp\n" +
+                    "Curry – ½ tsp\n" +
+                    "Water – ½ cup.",
+            recipe = "1) Chicken breast fillet is crushed in a blender or with a meat grinder. We do the same with one onion and half of the mushrooms. \n\n" +
+                    "2) Combine the chopped products, add egg, curry seasoning, salt, freshly ground pepper, bran. By the way, you can replace the bran with ground oat flakes. Stir, let it stand for a while. \n\n" +
+                    "3) For frying, cut the remaining mushrooms and onions. Grease the frying pan with oil, pass the onion, then put the mushrooms. Simmer under the lid. \n\n" +
+                    "4) When the mushrooms become soft and let the juice, add sour cream, curry seasoning, hot water, salt to taste. Bring to a boil, turn off the fire, let it cool down. \n\n" +
+                    "5) Roll medium-sized meat balls with wet hands. We put it in a saucepan, pour mushroom sauce, put it on the stove. Simmer under the lid for 20 minutes, medium heat. Periodically pour the sauce over the meatballs. We give the finished dish a little brew under the lid."
+        ),Recipe(
             id = 4,
             name = "Salad with beans, vegetables and chicken breast",
-            kkal = "119 kkal per 100 gramm",
-            bzhu = "Proteins - 14 gramm\n" +
-                    "Fats - 2 gramm\n" +
-                    "Carbohydrates - 12 gramm",
+            kkal = "119 kkal per 100 g.",
+            bzhu = "Proteins - 14 g.\n" +
+                    "Fats - 2 g.\n" +
+                    "Carbohydrates - 12 g.",
             image = "https://samors.ru/wp-content/uploads/2023/01/salat-s-fasolyu-ovoshhami-i-kurinoj-grudkoj.jpg",
-            ingridients = "Куриное филе – 300 г.\n" +
-                    "Фасоль красная – 200 г.\n" +
-                    "Помидоры – 2 шт.\n" +
-                    "Огурцы – 2 шт.\n" +
-                    "Зеленый лук – пучок.\n" +
-                    "Петрушка – пучок.\n" +
-                    "Йогурт 2 % – 3 ст. л.",
-            recipe = "Запеченное филе куриной грудки режем брусочками, так же поступаем с огурцами. Из помидоров удаляем серединку с семенами, мякоть измельчаем. Перемещаем нарезку в миску, добавляем консервированную фасоль и нарезанную зелень. Сдабриваем несладким йогуртом, солим по вкусу."
-        ), Recipe(
+            ingridients = "Chicken fillet – 300 g. \n" +
+                    "Red beans – 200 g. \n" +
+                    "Tomatoes – 2 pcs. \n" +
+                    "Cucumbers – 2 pcs. \n" +
+                    "Green onion – a bunch. \n" +
+                    "Parsley – a bunch. \n" +
+                    "Yogurt 2 % – 3 tbsp. l.",
+            recipe = "Baked chicken breast fillet cut into cubes, we do the same with cucumbers. Remove the middle with seeds from tomatoes, chop the pulp. We move the slicing into a bowl, add canned beans and chopped greens. Flavored with unsweetened yogurt, salt to taste."
+        ),Recipe(
             id = 2,
             name = "Vegetable salad with beans and celery",
-            kkal = "84 kkal per 100 gramm",
-            bzhu = "Proteins - 3 gramm\n" +
-                    "Fats - 3 gramm\n" +
-                    "Carbohydrates - 11 gramm",
+            kkal = "84 kkal per 100 g.",
+            bzhu = "Proteins - 3 g.\n" +
+                    "Fats - 3 g.\n" +
+                    "Carbohydrates - 11 g.",
             image = "https://samors.ru/wp-content/uploads/2023/01/ovoshhnoj-salat-s-fasolyu-i-seldereem.jpg",
-            ingridients = "Фасоль красная – 400 г.\n" +
-                    "Кукуруза консервированная – 400 г.\n" +
-                    "Сладкий перец – 1 шт.\n" +
-                    "Вареная морковь – 2 шт.\n" +
-                    "Сельдерей – 3 черешка.\n" +
-                    "Петрушка – 5–6 веточек.\n" +
-                    "Масло оливковое – 3 ст. л.\n" +
-                    "Винный уксус – 1 ст. л.\n" +
-                    "Горчица – 1 ч. л.\n" +
-                    "Соль, смесь перцев.",
-            recipe = "Нарезаем овощи кусочками, отправляем в блюдо с кукурузой и фасолью. Смешиваем горчицу с уксусом, маслом, солью и перцем. Перемешиваем до образования эмульсии. Выливаем соус в салат, аккуратно размешиваем."
-        ), Recipe(
+            ingridients = "Red beans – 400 g. \n" +
+                    "Canned corn – 400 g. \n" +
+                    "Sweet pepper – 1 pc. \n" +
+                    "Boiled carrots – 2 pcs. \n" +
+                    "Celery – 3 stalks. \n" +
+                    "Parsley – 5-6 sprigs. \n" +
+                    "Olive oil – 3 tbsp. l.\n" +
+                    "Wine vinegar – 1 tbsp. l.\n" +
+                    "Mustard – 1 tsp.\n" +
+                    "Salt, pepper mixture.",
+            recipe = "We cut the vegetables into pieces, send them to a dish with corn and beans. Mix mustard with vinegar, oil, salt and pepper. Stir until an emulsion is formed. Pour the sauce into the salad, gently stir."
+        ),Recipe(
             id = 3,
             name = "Carrot cake on applesauce",
-            kkal = "125 kkal per 100 gramm",
-            bzhu = "Proteins - 6 gramm\n" +
-                    "Fats - 4 gramm\n" +
-                    "Carbohydrates - 16 gramm",
+            kkal = "125 kkal per 100 g.",
+            bzhu = "Proteins - 6 g.\n" +
+                    "Fats - 4 g.\n" +
+                    "Carbohydrates - 16 g.",
             image = "https://samors.ru/wp-content/uploads/2023/01/dieticheskij-morkovnyj-pirog-na-yablochnom-pyure.jpg",
-            ingridients = "Яблочное пюре – 220 г.\n" +
-                    "Яйца куриные – 4 шт.\n" +
-                    "Морковь – 200 г.\n" +
-                    "Мука цельнозерновая – 120 г.\n" +
-                    "Разрыхлитель – 5 г.\n" +
-                    "Подсластитель, специи.",
-            recipe = "1) Очищенную морковь натираем на мелкой терке или измельчаем с помощью блендера.\n\n" +
-                    "2) Вбиваем в рабочую миску яйца. Добавляем детское фруктовое пюре без сахара, тщательно перемешиваем венчиком.\n\n" +
-                    "3) Вмешиваем цельнозерновую муку с разрыхлителем. Добавляем натертую морковь, любимые специи. Замешиваем однородное тесто.\n\n" +
-                    "4) Силиконовую форму смазываем растительным маслом. Перекладываем тесто, распределяем.\n\n" +
-                    "5) Выпекаем пирог в разогретой до 180 градусов духовке 35 минут. Готовность обязательно проверяем зубочисткой. После остывания, снимаем форму."
-        )/*,Recipe(
-            id = ,
-            name = "",
-            kkal = " kkal per 100 gramm",
-            bzhu = "Proteins -  gramm\n" +
-                    "Fats -  gramm\n" +
-                    "Carbohydrates -  gramm",
-            image = "",
-            ingridients = "",
-            recipe = ""
+            ingridients = "Applesauce – 220 g. \n" +
+                    "Chicken eggs – 4 pcs. \n" +
+                    "Carrots – 200 g. \n" +
+                    "Wholegrain flour – 120 g. \n" +
+                    "Baking powder – 5. \n" +
+                    "Sweetener, spices.",
+            recipe = "1) Peeled carrots are grated on a fine grater or crushed with a blender. \n\n" +
+                    "2) We drive eggs into a working bowl. Add baby fruit puree without sugar, mix thoroughly with a whisk. \n\n" +
+                    "3) Mix whole grain flour with baking powder. Add grated carrots, favorite spices. Knead a homogeneous dough. \n\n" +
+                    "4) Lubricate the silicone mold with vegetable oil. We shift the dough, distribute it. \n\n" +
+                    "5) Bake the pie in a preheated 180 degree oven for 35 minutes. Readiness must be checked with a toothpick. After cooling, remove the mold."
         ),Recipe(
-            id = ,
-            name = "",
-            kkal = " kkal per 100 gramm",
-            bzhu = "Proteins -  gramm\n" +
-                    "Fats -  gramm\n" +
-                    "Carbohydrates -  gramm",
-            image = "",
-            ingridients = "",
-            recipe = ""
-        )*/, Recipe(
             id = 2,
             name = "Chicken meatballs with rice in sour cream sauce",
-            kkal = "104 kkal per 100 gramm",
-            bzhu = "Proteins - 10 gramm\n" +
-                    "Fats - 5 gramm\n" +
-                    "Carbohydrates - 5 gramm",
+            kkal = "104 kkal per 100 g.",
+            bzhu = "Proteins - 10 g.\n" +
+                    "Fats - 5 g.\n" +
+                    "Carbohydrates - 5 g.",
             image = "https://samors.ru/wp-content/uploads/2023/02/kurinye-tefteli-s-risom-v-smetannom-souse.jpg",
-            ingridients = "Фарш куриный – 500 г.\n" +
-                    "Луковица – 1 шт.\n" +
-                    "Рис вареный – ½ ст.\n" +
-                    "Чеснок – 1 долька.\n" +
-                    "Яйцо куриное – 1 шт.\n" +
-                    "Соль – 1 ч. л.\n" +
-                    "Куриный бульон – 400 мл.\n" +
-                    "Мука цельнозерновая – 2 ст. л.\n" +
-                    "Сметана 15 % – 1 ст. л.\n" +
-                    "Паприка – ½ ч. л.\n" +
-                    "Соль, перец.\n" +
-                    "Укроп, петрушка – 1 пучок.",
-            recipe = "1) Фарш солим, перчим, выдавливаем зубчик чеснока через пресс. Репчатый лук натираем на терке (так будет сочнее). Добавляем яйцо, вареный рис, тщательно вымешиваем фарш.\n\n" +
-                    "2) Формируем мясные шарики, для удобства можно воспользоваться ложкой для мороженого. Немного обваливаем в муке.\n\n" +
-                    "3) Выкладываем на разогретую сковороду, смазанную капелькой масла. Обжариваем 3–4 минуты с одной стороны. Затем переворачиваем, накрываем крышкой, убавляем огонь, тушим 5–7 минут.\n\n" +
-                    "4) Тем временем приготовим сметанный соус. Соединяем ингредиенты для соуса, хорошо перемешиваем венчиком, чтобы все комочки растворились.\n\n" +
-                    "5) Заливаем тефтельки соусом, доводим до кипения, посыпаем рубленой зеленью. Тушим под крышкой 5 минут. Ближе к концу изделия можно перевернуть, чтобы они со всех сторон пропитались соусом.\n"
+            ingridients = "Minced chicken – 500 g. \n" +
+                    "Onion – 1 pc. \n" +
+                    "Boiled rice – ½ tbsp . \n" +
+                    "Garlic – 1 clove.\n" +
+                    "Chicken egg – 1 pc. \n" +
+                    "Salt – 1 tsp.\n" +
+                    "Chicken broth – 400 ml. \n" +
+                    "Wholegrain flour – 2 tbsp. l.\n" +
+                    "Sour cream 15% – 1 tbsp. l.\n" +
+                    "Paprika – ½ tsp.\n" +
+                    "Salt, pepper. \n" +
+                    "Dill, parsley – 1 bunch.",
+            recipe = "1) Mince salt, pepper, squeeze out a clove of garlic through a press. Grate onions on a grater (it will be juicier this way). Add the egg, boiled rice, carefully knead the minced meat. \n\n" +
+                    "2) We form meat balls, for convenience, you can use an ice cream spoon. Roll a little in flour. \n\n" +
+                    "3) Spread on a preheated frying pan, greased with a drop of oil. Fry for 3-4 minutes on one side. Then turn over, cover with a lid, turn down the heat, simmer for 5-7 minutes. \n\n" +
+                    "4) Meanwhile, prepare the sour cream sauce. Combine the ingredients for the sauce, mix well with a whisk so that all the lumps dissolve. \n\n" +
+                    "5) Pour the sauce over the meatballs, bring to a boil, sprinkle with chopped herbs. Simmer under the lid for 5 minutes. Closer to the end of the product can be turned over so that they are soaked in sauce from all sides."
         )
     )
 }

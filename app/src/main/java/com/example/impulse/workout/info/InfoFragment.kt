@@ -32,8 +32,10 @@ class InfoFragment : Fragment(R.layout.info_fragment) {
     }
 
     private fun setInfo(exercise: Exercise) {
-        binding?.repeat?.text = "Part of body: ${exercise.bodyPart}"
+
         binding?.desc?.text = "Exercise description: ${exercise.description}"
+        binding?.title?.text = "${exercise.title}"
+
     }
 
     private fun setGif(exercise: Exercise) {

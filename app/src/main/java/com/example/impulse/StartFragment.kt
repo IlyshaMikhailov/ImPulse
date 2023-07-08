@@ -5,26 +5,15 @@ import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
-import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.impulse.databinding.StartFragmentBinding
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
-import timber.log.Timber
 
 class StartFragment : Fragment(R.layout.start_fragment) {
     private var binding: StartFragmentBinding? = null
+
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -62,7 +51,6 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                         editor?.putBoolean("Key", true)
                         editor?.apply()
                         findNavController().navigate(R.id.action_startFragment_to_workoutFragment)
-
                     } else {
                         textView?.text = "Data entered incorrectly."
                     }
@@ -73,35 +61,6 @@ class StartFragment : Fragment(R.layout.start_fragment) {
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
-    }
-
-    private fun validateFields(
-        name: String?,
-        age: String?,
-        height: String?,
-        weight: String?,
-        dsWeight: String?,
-    ): Boolean {
-        if (name.isNullOrEmpty() || name.length > 20 || !name[0].isUpperCase()) {
-            return false
-        }
-        if (age.isNullOrEmpty() || age.toInt() !in 1..150) {
-            return false
-        }
-        if (height.isNullOrEmpty() || height.toInt() !in 0..250) {
-            return false
-        }
-        if (weight.isNullOrEmpty() || weight.toDouble() !in 0.0..250.0) {
-            return false
-        }
-        if (dsWeight.isNullOrEmpty() || dsWeight.toDouble() !in 0.0..250.0) {
-            return false
-        }
-        return true
-    }
 
     private fun addTextChangedListenerForName(name: TextInputEditText?) {
         name?.addTextChangedListener(object : TextWatcher {
@@ -122,7 +81,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
         })
     }
 
-    private fun addTextChangedListenerForAge(age: TextInputEditText?) {
+    fun addTextChangedListenerForAge(age: TextInputEditText?) {
         age?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -141,7 +100,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
         })
     }
 
-    private fun addTextChangedListenerForHeight(height: TextInputEditText?) {
+    fun addTextChangedListenerForHeight(height: TextInputEditText?) {
         height?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -160,7 +119,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
         })
     }
 
-    private fun addTextChangedListenerForWeight(weight: TextInputEditText?) {
+    fun addTextChangedListenerForWeight(weight: TextInputEditText?) {
         weight?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -179,7 +138,7 @@ class StartFragment : Fragment(R.layout.start_fragment) {
         })
     }
 
-    private fun addTextChangedListenerForDesiredWeight(desiredWeight: TextInputEditText?) {
+    fun addTextChangedListenerForDesiredWeight(desiredWeight: TextInputEditText?) {
         desiredWeight?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -197,5 +156,34 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                 }
             }
         })
+    }
+
+    companion object {
+        fun validateFields(
+            name: String?,
+            age: String?,
+            height: String?,
+            weight: String?,
+            dsWeight: String?,
+        ): Boolean {
+            if (name.isNullOrEmpty() || name.length > 20
+                || !name[0].isUpperCase() || name.contains(" ")
+            ) {
+                return false
+            }
+            if (age.isNullOrEmpty() || age.toInt() !in 1..150) {
+                return false
+            }
+            if (height.isNullOrEmpty() || height.toInt() !in 0..250) {
+                return false
+            }
+            if (weight.isNullOrEmpty() || weight.toDouble() !in 0.0..250.0) {
+                return false
+            }
+            if (dsWeight.isNullOrEmpty() || dsWeight.toDouble() !in 0.0..250.0) {
+                return false
+            }
+            return true
+        }
     }
 }
