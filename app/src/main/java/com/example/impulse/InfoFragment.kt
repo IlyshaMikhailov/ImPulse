@@ -26,7 +26,7 @@ class InfoFragment : Fragment(R.layout.info_fragment) {
 
     private fun getInfo(): Exercise {
         val title = arguments?.getInt(ARG_ID)
-        return ExerciseRepository.list.single { it.id == title }
+        return ExerciseRepository.hashSet.single { it.id == title }
     }
 
     private fun setInfo(exercise: Exercise) {

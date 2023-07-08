@@ -79,6 +79,7 @@
         android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/tv_edit_profile" />
 
     <ImageView
@@ -101,6 +102,23 @@
         android:gravity="left|center_vertical"
         android:text="@string/about_us"
         android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:passwordToggleTint="#FF0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_to_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_change_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toEndOf="@+id/iv_info"

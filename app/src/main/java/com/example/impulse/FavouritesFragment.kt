@@ -11,14 +11,14 @@ import com.example.impulse.databinding.FavouritesFragmentBinding
 class FavouritesFragment : Fragment(R.layout.favourites_fragment) {
     private var binding: FavouritesFragmentBinding? = null
     private var adapter: FavouritesAdapter? = null
-    private var listOfExercise = ArrayList<Exercise>()
+    private var setOfExercise = HashSet<Exercise>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FavouritesFragmentBinding.bind(view)
 
-        for (exercise in ExerciseRepository.list) {
+        for (exercise in ExerciseRepository.hashSet) {
             if (exercise.isFavourites) {
-                listOfExercise.add(exercise)
+                setOfExercise.add(exercise)
             }
         }
 
@@ -27,9 +27,9 @@ class FavouritesFragment : Fragment(R.layout.favourites_fragment) {
     }
 
     private fun initAdapter() {
-        adapter = listOfExercise?.let {
+        adapter = setOfExercise?.let {
             FavouritesAdapter(
-                list = it,
+                hashSet = it,
                 glide = Glide.with(this),
                 onItemClick = { exercise ->
                     findNavController().navigate(
