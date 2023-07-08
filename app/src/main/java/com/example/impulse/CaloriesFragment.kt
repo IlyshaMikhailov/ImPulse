@@ -21,8 +21,8 @@ class CaloriesFragment : Fragment(R.layout.calories_fragment) {
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
         val age = sharedPref?.getString("Age", "")?.toInt()
         val height = sharedPref?.getString("Height", "")?.toInt()
-        val weight = sharedPref?.getString("Weight", "")?.toInt()
-        val dsWeight = sharedPref?.getString("DesiredWeight", "")?.toInt()
+        val weight = sharedPref?.getString("Weight", "")?.toDouble()
+        val dsWeight = sharedPref?.getString("DesiredWeight", "")?.toDouble()
         binding = CaloriesFragmentBinding.bind(view)
         if(age!=null && height!=null && weight!=null && dsWeight!=null){
             binding?.tvWaterValue?.text = (weight*35/1000).toString()+" litres"
