@@ -15,6 +15,7 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = ExerciseFragmentBinding.bind(view)
+        initAdapter()
 
         val descWorkout = arguments?.getString(ARG_TITLE)
         println(descWorkout)
@@ -22,8 +23,12 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
             if (descWorkout == exercise.bodyPart)
                 listOfExercise.add(exercise)
         }
+        binding?.imBtnBack?.setOnClickListener {
+            findNavController().navigateUp()
+        }
         initAdapter()
     }
+
 
     private fun initAdapter() {
         adapter = ExerciseAdapter(
@@ -31,12 +36,14 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
             glide = Glide.with(this),
             onItemClick = { exercise ->
                 findNavController().navigate(
-                        R.id.action_exerciseFragment_to_infoFragment,
-                        InfoFragment.createBundle(exercise.id))
+                    R.id.action_exerciseFragment_to_infoFragment,
+                    InfoFragment.createBundle(exercise.id)
+                )
             }
         )
         binding?.rvExerciseFragment?.adapter = adapter
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -47,10 +54,12 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
 
         private const val ARG_TITLE = "ARG_TITLE"
 
-        fun createBundle(str : String): Bundle {
+        fun createBundle(str: String): Bundle {
             val bundle = Bundle()
             bundle.putString(ARG_TITLE, str)
             return bundle
         }
     }
 }
+
+
