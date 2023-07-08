@@ -31,8 +31,7 @@ object ExerciseRepository {
             "Hands",
             "Reversed pull up",
             false,
-            "\n" +
-                    "In a position with your back to a chair, rest your hands on the front of the stud while pushing your hips and legs.\n" +
+            "In a position with your back to a chair, rest your hands on the front of the stud while pushing your hips and legs.\n" +
                     "Keeping your back close to the chair, bend your elbows to a 90 degree angle.\n" +
                     "4 sets of 13 reps, rest between sets 3.5 minutes",
             R.raw.reversedpullupsonthechair,
@@ -44,8 +43,8 @@ object ExerciseRepository {
             "Press",
             "Scruchivaniya",
             false,
-            "Lie on your back, bend your knees and put your hands behind your head, as in the video, slightly raising the body, bringing the ribs and pelvis together.Each set of 15 repetitions, total approaches should be 4\\n\" +\n" +
-                    "\"rest between sets should be 2 to 3 minutes.",
+            "Lie on your back, bend your knees and put your hands behind your head, as in the video, slightly raising the body, bringing the ribs and pelvis together.Each set of 15 repetitions, total approaches should be 4\n" +
+                    "rest between sets should be 2 to 3 minutes.",
             R.raw.scruchivaniya,
             "https://www.mentoday.ru/upload/img_cache/a78/a78c6b22e05b8bad1038929d0f2aa717_ce_1080x719x0x52_cropped_666x444.jpg",
             "https://assets.gq.ru/photos/5d9f40b43a54c0000840d1c6/4:3/w_285,h_213,c_limit/giphy.gif"
@@ -87,9 +86,10 @@ object ExerciseRepository {
         Exercise(
             7,
             "Press",
-            "Scisors",
+            "Scissors",
             false,
-            "Lie on your back, put your head on the floor. Alternately raise your right and left legs without bending at the knees and without lowering your legs to the floor.\n" +
+            "Lie on your back, put your head on the floor. Alternately raise your right " +
+                    "and left legs without bending at the knees and without lowering your legs to the floor.\n" +
                     "4 sets of 15 reps",
             R.raw.scisors,
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd--0UfdhzXO4nkz5a-fy800KjC2g7VN7ihw&usqp=CAU",
@@ -100,7 +100,8 @@ object ExerciseRepository {
             "Press",
             "Bicycle",
             false,
-            "Lie on your back, put your hands under your head, raise each leg in turn to your head and point the opposite elbow in its direction.\n" +
+            "Lie on your back, put your hands under your head, raise each leg in turn to " +
+                    "your head and point the opposite elbow in its direction.\n" +
                     "4 sets of 20 reps rest between sets of 2 to 3 minutes",
             R.raw.bicycle,
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREAXCwpIDruU0oHJq0nIYP4pU-nUFrao2ACQ&usqp=CAU",
@@ -111,7 +112,8 @@ object ExerciseRepository {
             "Press",
             "Alpinist",
             false,
-            "Take an emphasis lying down. Pull your right knee to your chest, jump out and change legs in the air - left forward, right back.\n" +
+            "Take an emphasis lying down. Pull your right knee to your chest, jump out " +
+                    "and change legs in the air - left forward, right back.\n" +
                     " 4 sets of 16 reps, rest between sets 2 to 3 minutes",
             R.raw.alpinist,
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yiaFTn-5gBMnfn0VtpAkPK8ZSY8RKds3tw&usqp=CAU",
@@ -134,7 +136,8 @@ object ExerciseRepository {
             "Sitdown",
             false,
             "Feet shoulder-width apart, socks slightly apart, back straight, look forward,\n" +
-                    "bending the legs at the knees, lower the pelvis down to a position where the thighs are parallel to the floor, while the position of the body does not change,\n" +
+                    "bending the legs at the knees, lower the pelvis down to a position where the " +
+                    "thighs are parallel to the floor, while the position of the body does not change,\n" +
                     "unbend the legs and return to the starting position,\n" +
                     "hands can help keep the balance, being in front of the chest.\n" +
                     "3 sets of 15 reps, rest between sets of 3 minutes",
@@ -147,7 +150,8 @@ object ExerciseRepository {
             "Legs",
             "Caviar",
             false,
-            "Take dumbbells in your hands and straighten your back. Rise on your toes as you exhale, and as you inhale, lower your entire foot. If desired, place your socks on a plate or other support to make the workout more difficult.\n" +
+            "Take dumbbells in your hands and straighten your back. Rise on your toes as" +
+                    " you exhale, and as you inhale, lower your entire foot. If desired, place your socks on a plate or other support to make the workout more difficult.\n" +
                     "4 sets of 20 reps, rest 2-3 minutes",
             R.raw.ikra1,
             "https://www.futurefit.co.uk/wp-content/uploads/2019/08/shutterstock_1363264151-1500x1039.jpg",
@@ -160,7 +164,8 @@ object ExerciseRepository {
             false,
             "Jump up and grab the bar with a wide grip.\n" +
                     "Hang on the crossbar.\n" +
-                    "Take a deep breath and, holding your breath, tighten your lats and pull yourself up. During pull-ups, the elbows should always remain in the same place.\n" +
+                    "Take a deep breath and, holding your breath, tighten your lats and pull " +
+                    "yourself up. During pull-ups, the elbows should always remain in the same place.\n" +
                     "Pull yourself up until your chin is level with or slightly above the bar.\n" +
                     "Do 3-4 sets depending on your ability and rest for 4 minutes",
             R.raw.pullups,
@@ -173,7 +178,8 @@ object ExerciseRepository {
             "Back pull up",
             false,
             "Grab the crossbar.\n" +
-                    "As you exhale, start moving up. As you rise, try to reduce the shoulder blades so that it is the back muscles that are included in the work, and not the arms. Keep pulling up until there are a few inches between the back of your head and the bar.\n" +
+                    "As you exhale, start moving up. As you rise, try to reduce the shoulder" +
+                    " blades so that it is the back muscles that are included in the work, and not the arms. Keep pulling up until there are a few inches between the back of your head and the bar.\n" +
                     "Slowly lower yourself down.\n" +
                     "Do 3 sets depending on your capabilities, rest for 4 minutes",
             R.raw.backpullups,
