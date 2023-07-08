@@ -31,8 +31,5 @@
     <string name="favourites">Favourites</string>
     <string name="information">Information</string>
     <string name="about_us">About us</string>
-    <string name="to_change_profile">To change profile</string>
-    <string name="textview">TextView</string>
-
 
 </resources>
