@@ -2,7 +2,6 @@ package com.example.impulse
 
 import androidx.fragment.app.Fragment
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
@@ -18,7 +17,7 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
         binding = ExerciseFragmentBinding.bind(view)
         initAdapter()
 
-        val descWorkout = arguments?.getString(STR)
+        val descWorkout = arguments?.getString(ARG_TITLE)
         println(descWorkout)
         for (exercise in ExerciseRepository.list) {
             if (descWorkout == exercise.bodyPart)
@@ -53,11 +52,11 @@ class ExerciseFragment : Fragment(R.layout.exercise_fragment) {
 
     companion object {
 
-        private const val STR = "STR"
+        private const val ARG_TITLE = "ARG_TITLE"
 
         fun createBundle(str: String): Bundle {
             val bundle = Bundle()
-            bundle.putString(STR, str)
+            bundle.putString(ARG_TITLE, str)
             return bundle
         }
     }
