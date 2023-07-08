@@ -7,7 +7,7 @@ import com.bumptech.glide.RequestManager
 import com.example.impulse.databinding.ItemExerciseBinding
 
 class FavouritesAdapter(
-    private var list: ArrayList<Exercise>,
+    private var hashSet: HashSet<Exercise>,
     private var glide: RequestManager,
     private val onItemClick: (Exercise) -> Unit,
 ) : RecyclerView.Adapter<ExerciseItem>() {
@@ -26,10 +26,10 @@ class FavouritesAdapter(
     )
 
     override fun onBindViewHolder(holder: ExerciseItem, position: Int) {
-        holder.onBind(list[position])
+        holder.onBind(hashSet.elementAt(position))
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return hashSet.size
     }
 }

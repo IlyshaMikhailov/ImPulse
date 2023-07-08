@@ -86,8 +86,5 @@
         android:id="@+id/infoFragment"
         android:name="com.example.impulse.InfoFragment"
         android:label="InfoFragment" />
-    android:id="@+id/infoFragment"
-        android:name="com.example.impulse.InfoFragment"
-        android:label="InfoFragment" />
 
 </navigation>
