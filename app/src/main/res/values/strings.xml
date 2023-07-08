@@ -32,6 +32,16 @@
     <string name="information">Information</string>
     <string name="about_us">About us</string>
     <string name="to_change_profile">To change profile</string>
-    <string name="textview">Text Name</string>
+    <string name="textview">TextView</string>
+    <string name="support">Support</string>
+    <string name="change_data_profile">Change data profile</string>
+    <string name="title_welcome_support">Welcome to the "ImPulse" application support window.</string>
+    <string name="support_info">Here you can find contacts to contact the developers of this application. If you want to leave your feedback about the work of our application so that developers can see it, then you can also use the following contacts: </string>
+    <string name="first_email">Email: impulsefeedback@gmail.com</string>
+    <string name="second_email">Email: impulsesupport@gmail.com</string>
+    <string name="first_number">Number: +7 (992) 206–45–45</string>
+    <string name="second_number">Number: +7 (800) 555–35–35</string>
+    <string name="second_support_info">If you find any bug in our application, please let us know by mail:</string>
+
 
 </resources>

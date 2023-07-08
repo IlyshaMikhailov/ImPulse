@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
+
     app:startDestination="@id/startFragment">
 
     <fragment
@@ -16,17 +17,17 @@
     </fragment>
     <fragment
         android:id="@+id/caloriesFragment"
-        android:name="com.example.impulse.CaloriesFragment"
-        android:label="CaloriesFragment"
         app:popUpTo="@id/startFragment"
-        app:popUpToInclusive="true">
+        app:popUpToInclusive="true"
+        android:name="com.example.impulse.calories.CaloriesFragment"
+        android:label="CaloriesFragment" >
         <action
             android:id="@+id/action_caloriesFragment_to_recipesFragment"
             app:destination="@id/recipesFragment" />
     </fragment>
     <fragment
         android:id="@+id/favouritesFragment"
-        android:name="com.example.impulse.FavouritesFragment"
+        android:name="com.example.impulse.favourites.FavouritesFragment"
         android:label="FavouritesFragment" >
         <action
             android:id="@+id/action_favouritesFragment_to_infoFragment"
@@ -34,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.impulse.ProfileFragment"
+        android:name="com.example.impulse.profile.ProfileFragment"
         android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profileFragment_to_settingsFragment"
@@ -42,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
-        android:name="com.example.impulse.ExerciseFragment"
+        android:name="com.example.impulse.workout.exercise.ExerciseFragment"
         android:label="ExerciseFragment" >
         <action
             android:id="@+id/action_exerciseFragment_to_infoFragment"
@@ -50,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/workoutFragment"
-        android:name="com.example.impulse.WorkoutFragment"
+        android:name="com.example.impulse.workout.WorkoutFragment"
         android:label="WorkoutFragment" >
         <action
             android:id="@+id/action_workoutFragment_to_exerciseFragment"
@@ -58,16 +59,19 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.impulse.SettingsFragment"
+        android:name="com.example.impulse.profile.settings.SettingsFragment"
         android:label="SettingsFragment" >
         <action
             android:id="@+id/action_settingsFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
     </fragment>
     <fragment
 
         android:id="@+id/recipesFragment"
-        android:name="com.example.impulse.RecipesFragment"
+        android:name="com.example.impulse.calories.RecipesFragment"
         android:label="fragment_recipes"
         tools:layout="@layout/fragment_recipes" >
         <action
@@ -76,24 +80,26 @@
     </fragment>
     <fragment
         android:id="@+id/recipeInfoFragment"
-        android:name="com.example.impulse.RecipeInfoFragment"
+        android:name="com.example.impulse.calories.RecipeInfoFragment"
         android:label="fragment_recipe_info"
         tools:layout="@layout/fragment_recipe_info" />
     <fragment
         android:id="@+id/infoFragment"
-        android:name="com.example.impulse.InfoFragment"
+        android:name="com.example.impulse.workout.info.InfoFragment"
         android:label="InfoFragment" />
 
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="com.example.impulse.EditProfileFragment"
+        android:name="com.example.impulse.profile.settings.EditProfileFragment"
         android:label="EditProfileFragment" >
         <action
             android:id="@+id/action_editProfileFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
 
-
-
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.impulse.profile.settings.SupportFragment"
+        android:label="SupportFragment" />
 
 </navigation>

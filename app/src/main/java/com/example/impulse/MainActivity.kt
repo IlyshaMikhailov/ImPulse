@@ -9,6 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.impulse.databinding.ActivityMainBinding
+import com.example.impulse.workout.exercise.ExerciseRepository
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 

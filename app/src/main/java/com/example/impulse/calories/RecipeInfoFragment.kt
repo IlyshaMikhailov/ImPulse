@@ -1,12 +1,12 @@
-package com.example.impulse
+package com.example.impulse.calories
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.bumptech.glide.Glide
+import com.example.impulse.R
+import com.example.impulse.RecipeRepository
 import com.example.impulse.databinding.FragmentRecipeInfoBinding
 
 class RecipeInfoFragment : Fragment(R.layout.fragment_recipe_info) {

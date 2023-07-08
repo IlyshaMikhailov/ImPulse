@@ -1,6 +1,5 @@
-package com.example.impulse
+package com.example.impulse.workout.info
 
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -8,7 +7,10 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.example.impulse.R
 import com.example.impulse.databinding.InfoFragmentBinding
+import com.example.impulse.workout.exercise.Exercise
+import com.example.impulse.workout.exercise.ExerciseRepository
 
 class InfoFragment : Fragment(R.layout.info_fragment) {
     private var binding: InfoFragmentBinding? = null
@@ -26,7 +28,7 @@ class InfoFragment : Fragment(R.layout.info_fragment) {
 
     private fun getInfo(): Exercise {
         val title = arguments?.getInt(ARG_ID)
-        return ExerciseRepository.hashSet.single { it.id == title }
+        return ExerciseRepository.list.single { it.id == title }
     }
 
     private fun setInfo(exercise: Exercise) {

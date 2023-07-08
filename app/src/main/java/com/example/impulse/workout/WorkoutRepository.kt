@@ -1,4 +1,4 @@
-package com.example.impulse
+package com.example.impulse.workout
 
 object WorkoutRepository {
     val list: List<Workout> = listOf(

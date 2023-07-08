@@ -1,4 +1,4 @@
-package com.example.impulse
+package com.example.impulse.workout
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

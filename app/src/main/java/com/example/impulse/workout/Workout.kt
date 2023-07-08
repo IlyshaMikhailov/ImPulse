@@ -1,4 +1,4 @@
-package com.example.impulse
+package com.example.impulse.workout
 
 data class Workout(
     val title: String,

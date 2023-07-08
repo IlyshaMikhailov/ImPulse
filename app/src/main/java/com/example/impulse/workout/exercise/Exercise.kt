@@ -1,4 +1,4 @@
-package com.example.impulse
+package com.example.impulse.workout.exercise
 
 import android.os.Parcelable
 

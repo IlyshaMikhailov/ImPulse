@@ -1,7 +1,27 @@
-package com.example.impulse
+package com.example.impulse.workout.exercise
+
+import com.example.impulse.R
 
 object ExerciseRepository {
-    val hashSet =  setOf(
+    fun findAll() : List<Exercise> {
+        return list
+    }
+    fun updateFavorites(id: Int, isFavorite: Boolean) {
+        list.find { it.id == id }?.isFavourites = !isFavorite
+    }
+    fun findAllFavourites() : List<Exercise> {
+        return list.filter {
+            it.isFavourites
+        }
+    }
+
+    fun findAllToString(str : String) : List<Exercise>{
+        return list.filter {
+            it.bodyPart == str
+        }
+    }
+
+    val list =  listOf(
         Exercise(
             1,
             "Hands",
