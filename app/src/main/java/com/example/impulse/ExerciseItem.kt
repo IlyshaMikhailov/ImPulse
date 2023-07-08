@@ -36,8 +36,10 @@ class ExerciseItem(
                     binding.imBtnFavourite.setImageResource(R.drawable.baseline_star_border_24)
                 }
             }
+
             tvItemExerciseTitle.text = exercise.title
             tvItemExerciseDesc.text = exercise.description
+
             glide
                 .load(exercise.image)
                 .error(R.drawable.error)
