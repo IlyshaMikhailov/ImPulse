@@ -102,10 +102,5 @@
         android:id="@+id/supportFragment"
         android:name="com.example.impulse.profile.settings.SupportFragment"
         android:label="SupportFragment" />
-    android:id="@+id/infoFragment"
-        android:name="com.example.impulse.info.InfoFragment"
-        android:label="InfoFragment" />
-
-
 
 </navigation>
