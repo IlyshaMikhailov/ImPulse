@@ -1,15 +1,13 @@
-package com.example.impulse
+package com.example.impulse.profile.settings
 
 import android.content.Context
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.impulse.R
+import com.example.impulse.StartFragment
 import com.example.impulse.databinding.EditProfileFraagmentBinding
-import com.example.impulse.databinding.SettingsFragmentBinding
 import com.google.android.material.snackbar.Snackbar
 
 class EditProfileFragment : Fragment(R.layout.edit_profile_fraagment) {

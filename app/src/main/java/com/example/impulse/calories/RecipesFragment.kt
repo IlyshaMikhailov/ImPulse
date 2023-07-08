@@ -6,6 +6,7 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.impulse.R
+import com.example.impulse.RecipeRepository
 import com.example.impulse.databinding.FragmentRecipesBinding
 import kotlin.streams.toList
 

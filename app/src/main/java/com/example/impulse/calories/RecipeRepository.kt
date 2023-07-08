@@ -1,5 +1,7 @@
 package com.example.impulse
 
+import com.example.impulse.calories.Recipe
+
 object RecipeRepository {
     val list:List<Recipe> = listOf(
         Recipe(

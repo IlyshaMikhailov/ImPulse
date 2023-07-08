@@ -6,6 +6,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.impulse.R
+import com.example.impulse.RecipeRepository
 import com.example.impulse.databinding.FragmentRecipeInfoBinding
 
 class RecipeInfoFragment : Fragment(R.layout.fragment_recipe_info) {
