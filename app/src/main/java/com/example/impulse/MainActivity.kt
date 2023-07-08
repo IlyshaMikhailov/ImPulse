@@ -21,11 +21,9 @@ class MainActivity : AppCompatActivity() {
         val controller =
             (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment)
                 .navController
-
         findViewById<BottomNavigationView>(R.id.bnv_main).apply {
             setupWithNavController(controller)
         }
-
         binding?.bnvMain?.setOnItemSelectedListener { item ->
             NavigationUI.onNavDestinationSelected(item, controller)
             return@setOnItemSelectedListener true
@@ -38,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 
                 findViewById<BottomNavigationView>(R.id.bnv_main).visibility = View.VISIBLE
             }
-
         }
     }
 
@@ -47,5 +44,4 @@ class MainActivity : AppCompatActivity() {
         repository = null
 
     }
-
 }
