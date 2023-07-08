@@ -11,22 +11,17 @@
         android:name="com.example.impulse.StartFragment"
         android:label="StartFragment">
         <action
-            android:id="@+id/action_startFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-        <action
             android:id="@+id/action_startFragment_to_workoutFragment"
             app:destination="@id/workoutFragment"
             app:popUpTo="@id/startFragment"
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.impulse.MainFragment"
-        android:label="MainFragment" />
-    <fragment
         android:id="@+id/caloriesFragment"
         android:name="com.example.impulse.CaloriesFragment"
-        android:label="CaloriesFragment" >
+        android:label="CaloriesFragment"
+        app:popUpTo="@id/startFragment"
+        app:popUpToInclusive="true">
         <action
             android:id="@+id/action_caloriesFragment_to_recipesFragment"
             app:destination="@id/recipesFragment" />
