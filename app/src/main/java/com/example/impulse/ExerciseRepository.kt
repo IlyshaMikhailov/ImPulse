@@ -1,7 +1,7 @@
 package com.example.impulse
 
 object ExerciseRepository {
-    val list: List<Exercise> = listOf(
+    val hashSet =  setOf(
         Exercise(
             1,
             "Hands",

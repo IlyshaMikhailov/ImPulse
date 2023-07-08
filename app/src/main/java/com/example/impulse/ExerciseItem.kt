@@ -3,8 +3,6 @@ package com.example.impulse
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.RequestManager
 import com.example.impulse.databinding.ItemExerciseBinding
-import com.google.android.material.snackbar.Snackbar
-
 
 class ExerciseItem(
     private val binding: ItemExerciseBinding,
@@ -13,17 +11,18 @@ class ExerciseItem(
 ) : ViewHolder(binding.root) {
     fun onBind(exercise: Exercise) {
 
-        binding.imBtnFavourite.setOnClickListener{
+        binding.imBtnFavourite.setOnClickListener {
             when (exercise.isFavourites) {
                 true -> {
                     exercise.isFavourites = false
                     binding.imBtnFavourite.setImageResource(R.drawable.baseline_star_border_24)
-                    Snackbar.make(binding.root, "\"" + exercise.title + "\" exercise was deleted from \"Favourites exercise\"", Snackbar.LENGTH_SHORT).show()
+
                 }
+
                 false -> {
                     exercise.isFavourites = true
                     binding.imBtnFavourite.setImageResource(R.drawable.baseline_star_24)
-                    Snackbar.make(binding.root, "\"" + exercise.title + "\" exercise was added to \"Favourites exercise\"", Snackbar.LENGTH_SHORT).show()
+
                 }
             }
         }
@@ -32,7 +31,9 @@ class ExerciseItem(
             when (exercise.isFavourites) {
                 true -> {
                     binding.imBtnFavourite.setImageResource(R.drawable.baseline_star_24)
-                } false -> {
+                }
+
+                false -> {
                     binding.imBtnFavourite.setImageResource(R.drawable.baseline_star_border_24)
                 }
             }
