@@ -1,13 +1,17 @@
 package com.example.impulse
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.impulse.databinding.ActivityMainBinding
+import com.example.impulse.workout.exercise.ExerciseRepository
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,11 +25,9 @@ class MainActivity : AppCompatActivity() {
         val controller =
             (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment)
                 .navController
-
         findViewById<BottomNavigationView>(R.id.bnv_main).apply {
             setupWithNavController(controller)
         }
-
         binding?.bnvMain?.setOnItemSelectedListener { item ->
             NavigationUI.onNavDestinationSelected(item, controller)
             return@setOnItemSelectedListener true

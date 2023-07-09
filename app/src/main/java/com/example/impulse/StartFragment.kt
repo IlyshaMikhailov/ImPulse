@@ -1,83 +1,87 @@
 package com.example.impulse
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.impulse.databinding.StartFragmentBinding
-import com.google.android.material.textfield.TextInputLayout
-import timber.log.Timber
+import com.google.android.material.textfield.TextInputEditText
 
 class StartFragment : Fragment(R.layout.start_fragment) {
     private var binding: StartFragmentBinding? = null
-    private var textView: TextView? = null
-    private var name: EditText? = null
-    private var weight: EditText? = null
-    private var height: EditText? = null
-    private var age: EditText? = null
-    private var desiredWeidgt: EditText? = null
+
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = StartFragmentBinding.bind(view)
-        name = binding?.etName
-        age = binding?.etAge
-        height = binding?.etHeight
-        weight = binding?.etWeight
-        desiredWeidgt = binding?.etDesiredWeight
-        textView = binding?.tvError
+        val name = binding?.etName
+        val age = binding?.etAge
+        val height = binding?.etHeight
+        val weight = binding?.etWeight
+        val desiredWeight = binding?.etDesiredWeight
+        val textView = binding?.tvError
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+        if (sharedPref?.getBoolean("Key", false) == true) {
+            findNavController().navigate(R.id.action_startFragment_to_workoutFragment)
+        }
+        addTextChangedListenerForName(name)
+        addTextChangedListenerForAge(age)
+        addTextChangedListenerForHeight(height)
+        addTextChangedListenerForWeight(weight)
+        addTextChangedListenerForDesiredWeight(desiredWeight)
         binding?.run {
             button.setOnClickListener {
-                val etName: String = name?.text.toString()
-                val etAge: String = age?.text.toString()
-                val etHeight: String = height?.text.toString()
-                val etWeight: String = weight?.text.toString()
-                val etDsWeight: String = desiredWeidgt?.text.toString()
+                val etName = name?.text.toString()
+                val etAge = age?.text.toString()
+                val etHeight = height?.text.toString()
+                val etWeight = weight?.text.toString()
+                val etDsWeight = desiredWeight?.text.toString()
                 try {
-                    if (etName.length >= 50 || etName == "" || etAge.toInt() !in 1..150 || etHeight.toInt() !in 0..250 || etWeight.toDouble() !in 0.0..250.0 ||
-                        etDsWeight.toDouble() !in 0.0..250.0) {
-                        textView?.text = "Данные введены некорректно."
-                    } else {
-                        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+                    if (validateFields(etName, etAge, etHeight, etWeight, etDsWeight)) {
                         val editor = sharedPref?.edit()
                         editor?.putString("Name", etName)
                         editor?.putString("Height", etHeight)
                         editor?.putString("Age", etAge)
                         editor?.putString("Weight", etWeight)
                         editor?.putString("DesiredWeight", etDsWeight)
+                        editor?.putBoolean("Key", true)
                         editor?.apply()
                         findNavController().navigate(R.id.action_startFragment_to_workoutFragment)
+                    } else {
+                        textView?.text = "Data entered incorrectly."
                     }
                 } catch (e: NumberFormatException) {
-                    textView?.text = "Данные введены некорректно."
+                    textView?.text = "Data entered incorrectly."
                 }
             }
         }
+    }
 
+
+    private fun addTextChangedListenerForName(name: TextInputEditText?) {
         name?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
-                val input = s.toString().trim()
+                val input = s.toString()
                 if (input.isEmpty()) {
                     binding!!.tiName.error = "Enter a string value"
                 } else if (input.length > 20) {
                     binding!!.tiName.error = "Field cannot exceed 20 characters"
+                } else if (!input[0].isUpperCase()) {
+                    binding!!.tiName.error = "The name must begin with a capital letter"
                 } else {
                     binding!!.tiName.error = null
                 }
             }
         })
+    }
+
+    fun addTextChangedListenerForAge(age: TextInputEditText?) {
         age?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -87,13 +91,16 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                     if (age in 1..150) {
                         binding!!.tiAge.error = null
                     } else {
-                        binding!!.tiAge.error = "Enter a number in the range from 1 to 250"
+                        binding!!.tiAge.error = "Enter a number in the range from 1 to 150"
                     }
                 } else {
                     binding!!.tiAge.error = "Enter a numeric value"
                 }
             }
         })
+    }
+
+    fun addTextChangedListenerForHeight(height: TextInputEditText?) {
         height?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -110,6 +117,9 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                 }
             }
         })
+    }
+
+    fun addTextChangedListenerForWeight(weight: TextInputEditText?) {
         weight?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -126,7 +136,10 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                 }
             }
         })
-        desiredWeidgt?.addTextChangedListener(object : TextWatcher {
+    }
+
+    fun addTextChangedListenerForDesiredWeight(desiredWeight: TextInputEditText?) {
+        desiredWeight?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
@@ -135,7 +148,8 @@ class StartFragment : Fragment(R.layout.start_fragment) {
                     if (input in (1.0..250.0)) {
                         binding!!.tiDesiredWeight.error = null
                     } else {
-                        binding!!.tiDesiredWeight.error = "Enter a number in the range from 1 to 250"
+                        binding!!.tiDesiredWeight.error =
+                            "Enter a number in the range from 1 to 250"
                     }
                 } else {
                     binding!!.tiDesiredWeight.error = "Enter a numeric value"
@@ -143,8 +157,33 @@ class StartFragment : Fragment(R.layout.start_fragment) {
             }
         })
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
+
+    companion object {
+        fun validateFields(
+            name: String?,
+            age: String?,
+            height: String?,
+            weight: String?,
+            dsWeight: String?,
+        ): Boolean {
+            if (name.isNullOrEmpty() || name.length > 20
+                || !name[0].isUpperCase() || name.contains(" ")
+            ) {
+                return false
+            }
+            if (age.isNullOrEmpty() || age.toInt() !in 1..150) {
+                return false
+            }
+            if (height.isNullOrEmpty() || height.toInt() !in 0..250) {
+                return false
+            }
+            if (weight.isNullOrEmpty() || weight.toDouble() !in 0.0..250.0) {
+                return false
+            }
+            if (dsWeight.isNullOrEmpty() || dsWeight.toDouble() !in 0.0..250.0) {
+                return false
+            }
+            return true
+        }
     }
 }

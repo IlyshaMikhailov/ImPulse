@@ -20,16 +20,28 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
+            android:foreground="#99000000"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteX="38dp"
+
             tools:src="@drawable/error" />
+
+        <ImageButton
+            android:id="@+id/im_btn_favourite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:foreground="?selectableItemBackground"
+            android:background="#00FFFFFF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
 
         <TextView
             android:id="@+id/tv_item_exercise_title"
             android:layout_width="0dp"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
@@ -41,7 +53,7 @@
             tools:text="Item exercise title text for example" />
 
         <TextView
-            android:id="@+id/tv_item_exercise_time"
+            android:id="@+id/tv_item_exercise_desc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
