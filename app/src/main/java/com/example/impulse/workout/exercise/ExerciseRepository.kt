@@ -242,7 +242,7 @@ object ExerciseRepository {
                     "Repeat with the other leg. Aim for 2 to 3 sets of 8 to 12 repetitions per leg. " +
                     "Rest for about 30 seconds to 1 minute between sets to allow for recovery.",
             "https://www.mentoday.ru/upload/img_cache/b8c/b8c2dc8084e332d92cfcf1cf69f0b1a3_ce_1579x1052x270x0_cropped_666x444.jpg",
-            "https://giphy.com/gifs/8fit-man-1ncuQASTajJ0lx6Nix"
+            "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGZhdnZtYTZzNXp3NHhlYWE0azZsY2hvd283aGRxZ2xldGRmeDFsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1ncuQASTajJ0lx6Nix/giphy.gif"
         ),
         Exercise(
             18,
@@ -256,7 +256,7 @@ object ExerciseRepository {
                     "Aim for 10-12 repetitions and 2-3 sets, gradually increasing as you progress." +
                     "Focus on maintaining proper form and listening to your body's limits to prevent overexertion.",
             "https://avatars.dzeninfra.ru/get-zen_doc/5192222/pub_635d5b5f43ae4a7daf9f22dd_635d843b25146416da2db173/scale_1200",
-            "https://giphy.com/gifs/8fit-fitness-exercise-glute-bridge-SJWtWnRFsTiNVSECVP"
+            "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDYyYnVtaXJmY2JxNjg2NHN5ZzZ2Mzl2OHl0c2N1ZTQ3bWM1bHA4MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SJWtWnRFsTiNVSECVP/giphy.gif"
         ),
         Exercise(
             20,
