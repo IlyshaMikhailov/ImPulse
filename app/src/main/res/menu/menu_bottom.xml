@@ -10,7 +10,7 @@
         android:title="@string/favourites" />
     <item
         android:id="@+id/caloriesFragment"
-        android:icon="@drawable/baseline_calories_icon_24"
+        android:icon="@drawable/baseline_bakery_dining_24"
         android:title="@string/calories" />
     <item
         android:id="@+id/profileFragment"

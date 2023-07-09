@@ -23,6 +23,9 @@ class SettingsFragment : Fragment(R.layout.settings_fragment) {
             vSupport.setOnClickListener {
                 findNavController().navigate(R.id.action_settingsFragment_to_supportFragment)
             }
+            vAboutUs.setOnClickListener {
+                findNavController().navigate(R.id.action_settingsFragment_to_creatorsFragment)
+            }
         }
     }
 

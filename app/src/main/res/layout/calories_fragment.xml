@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
-        android:text="daily calorie intake: "
+        android:text="@string/daily_calorie_intake"
         app:layout_constraintTop_toBottomOf="@id/view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="12dp"
-        android:text="daily water intake: "
+        android:text="@string/daily_water_intake"
         android:textSize="20sp"
         />
     <TextView

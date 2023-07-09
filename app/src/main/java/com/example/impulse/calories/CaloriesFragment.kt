@@ -1,9 +1,9 @@
 package com.example.impulse.calories
 
 import android.content.Context
-import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.impulse.R
 import com.example.impulse.databinding.CaloriesFragmentBinding
@@ -35,7 +35,7 @@ class CaloriesFragment : Fragment(R.layout.calories_fragment) {
                 cal = (cal * 1.15)/1
             }
             val intcal:Int = cal.toInt()
-            binding?.tvCaloriesValue?.text = intcal.toString()+" kkal"
+            binding?.tvCaloriesValue?.text = intcal.toString() + " kcal"
         }
         binding?.btnBreakfast?.setOnClickListener{
             findNavController().navigate(
