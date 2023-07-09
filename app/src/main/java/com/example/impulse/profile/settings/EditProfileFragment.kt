@@ -54,7 +54,7 @@ class EditProfileFragment : Fragment(R.layout.edit_profile_fraagment) {
                     editor?.putString("DesiredWeight", etDsWeight)
                     editor?.apply()
                     findNavController().navigate(R.id.action_editProfileFragment_to_profileFragment)
-                }else{
+                } else {
                     Snackbar.make(view, "Data entered incorrectly.", Snackbar.LENGTH_SHORT).show();
                 }
             }

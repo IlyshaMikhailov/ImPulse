@@ -8,7 +8,7 @@ import com.example.impulse.R
 import com.example.impulse.databinding.SupportFragmentBinding
 
 class SupportFragment : Fragment(R.layout.support_fragment) {
-    private var binding : SupportFragmentBinding? = null
+    private var binding: SupportFragmentBinding? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

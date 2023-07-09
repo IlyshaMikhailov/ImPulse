@@ -1,6 +1,6 @@
 package com.example.impulse.workout.exercise
 
-data class Exercise (
+data class Exercise(
     val id: Int,
     val bodyPart: String,
     val title: String,

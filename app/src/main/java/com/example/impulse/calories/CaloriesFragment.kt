@@ -25,37 +25,37 @@ class CaloriesFragment : Fragment(R.layout.calories_fragment) {
         val weight = sharedPref?.getString("Weight", "")?.toDouble()
         val dsWeight = sharedPref?.getString("DesiredWeight", "")?.toDouble()
         binding = CaloriesFragmentBinding.bind(view)
-        if(age!=null && height!=null && weight!=null && dsWeight!=null){
-            binding?.tvWaterValue?.text = (weight*35/1000).toString()+" litres"
-            var cal =  10*weight + 6.25*height -5*age -161
-            if (dsWeight>weight){
-                cal = (cal*1.35)/1
+        if (age != null && height != null && weight != null && dsWeight != null) {
+            binding?.tvWaterValue?.text = (weight * 35 / 1000).toString() + " litres"
+            var cal = 10 * weight + 6.25 * height - 5 * age - 161
+            if (dsWeight > weight) {
+                cal = (cal * 1.35) / 1
             }
-            if (dsWeight==weight) {
-                cal = (cal * 1.15)/1
+            if (dsWeight == weight) {
+                cal = (cal * 1.15) / 1
             }
-            val intcal:Int = cal.toInt()
+            val intcal: Int = cal.toInt()
             binding?.tvCaloriesValue?.text = intcal.toString() + " kcal"
         }
-        binding?.btnBreakfast?.setOnClickListener{
+        binding?.btnBreakfast?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_caloriesFragment_to_recipesFragment,
                 createBundle(1)
             )
         }
-        binding?.btnLunch?.setOnClickListener{
+        binding?.btnLunch?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_caloriesFragment_to_recipesFragment,
                 createBundle(2)
             )
         }
-        binding?.btnSnack?.setOnClickListener{
+        binding?.btnSnack?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_caloriesFragment_to_recipesFragment,
                 createBundle(3)
             )
         }
-        binding?.btnDinner?.setOnClickListener{
+        binding?.btnDinner?.setOnClickListener {
             findNavController().navigate(
                 R.id.action_caloriesFragment_to_recipesFragment,
                 createBundle(4)
@@ -68,10 +68,11 @@ class CaloriesFragment : Fragment(R.layout.calories_fragment) {
         super.onDestroyView()
         binding = null
     }
-    companion object{
-        fun createBundle(id:Int):Bundle{
+
+    companion object {
+        fun createBundle(id: Int): Bundle {
             val bundle = Bundle()
-            bundle.putInt("CLASS_NAME",id)
+            bundle.putInt("CLASS_NAME", id)
             return bundle
         }
     }

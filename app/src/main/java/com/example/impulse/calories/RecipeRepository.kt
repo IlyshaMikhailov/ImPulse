@@ -389,7 +389,7 @@ object RecipeRepository {
                     "Mustard – 1 tsp.\n" +
                     "Salt, pepper mixture.",
             recipe = "We cut the vegetables into pieces, send them to a dish with corn and beans. Mix mustard with vinegar, oil, salt and pepper. Stir until an emulsion is formed. Pour the sauce into the salad, gently stir."
-        ),Recipe(
+        ), Recipe(
             id = 3,
             name = "Carrot cake on applesauce",
             kkal = "125 kkal per 100 g.",
