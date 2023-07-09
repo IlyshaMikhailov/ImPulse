@@ -41,7 +41,7 @@ class InfoFragment : Fragment(R.layout.info_fragment) {
     private fun setGif(exercise: Exercise) {
         binding?.imageView?.let {
             Glide.with(this)
-                .load(exercise.url)
+                .load(exercise.gif)
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .error(R.drawable.error)
                 .apply(options)

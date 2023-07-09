@@ -18,7 +18,7 @@ object EatingsRepository {
             desc = "Snacking helps the body maintain a constant glucose level, which reduces the uncontrollable feeling of hunger and allows you not to overeat in the main meals."
         ),
         Eatings(
-            id=4,
+            id = 4,
             title = "Dinner",
             desc = "When food is absorbed by the body, serotonin is produced, which causes a feeling of pleasure and happiness.Also, a proper dinner reduces blood sugar and \"bad\" cholesterol \n" +
                     "Sleep better if you are not hungry"

@@ -31,10 +31,10 @@ class MyListAdapter(
         viewType: Int
     ): ExerciseItem = ExerciseItem(
         binding = ItemExerciseBinding.inflate(
-        LayoutInflater.from(parent.context),
-        parent,
-        false
-    ),
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        ),
         glide,
         onItemClicked,
         onDeleteClick
